@@ -21,5 +21,3 @@
 - None
 
 ---
-
-_Update this file every day you work on the project. One entry per session._
