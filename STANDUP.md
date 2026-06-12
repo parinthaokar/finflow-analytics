@@ -7,7 +7,7 @@
 
 ## Week 1 — Foundation & Ingestion
 
-### Day 1 — [Date]
+### Day 1 — Jun 12 2026
 **✅ Done:**
 - Initialized repository with full folder structure
 - Created README, STANDUP, and design doc
