@@ -21,3 +21,14 @@
 - None
 
 ---
+### Day 2 — Jun 13 2026
+✅ Done:
+- Built Kafka producer streaming synthetic transactions to Kafka topic
+- Debugged Docker + Python environment issues
+- Transactions flowing in real time with fraud patterns visible
+
+🔜 Next:
+- Build Kafka consumer → Snowflake Bronze layer
+
+🚧 Blockers:
+- Kafka UI loading issue (not critical, producer confirmed working via terminal)
