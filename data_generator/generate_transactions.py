@@ -50,7 +50,7 @@ def create_transactions():
         timestamp = datetime.now()    
     
     transaction = {"transaction_id": str(uuid.uuid4()), "user_id": random.choice(USER_IDS), 
-                   "merchent_id": merchent, "amount": amount, "timestamp": timestamp,
+                   "merchant_id": merchent, "amount": amount, "timestamp": timestamp,
                    "location": fake.city(), "device_type": random.choice(DEVICE_TYPES),"is_fraud":is_fraud}
     return transaction
 
