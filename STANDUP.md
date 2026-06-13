@@ -23,12 +23,13 @@
 ---
 ### Day 2 — Jun 13 2026
 ✅ Done:
-- Built Kafka producer streaming synthetic transactions to Kafka topic
-- Debugged Docker + Python environment issues
-- Transactions flowing in real time with fraud patterns visible
+- Built Kafka consumer reading from transactions topic
+- Connected consumer to Snowflake Bronze layer
+- Transactions landing in RAW_TRANSACTIONS table in real time
+- Debugged topic naming issue and Snowflake auth
 
 🔜 Next:
-- Build Kafka consumer → Snowflake Bronze layer
+- Set up dbt project for Silver layer transformations
 
 🚧 Blockers:
-- Kafka UI loading issue (not critical, producer confirmed working via terminal)
+- Snowflake MFA required key pair auth setup
