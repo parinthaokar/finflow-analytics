@@ -38,7 +38,7 @@ def create_transactions():
     is_fraud = random.random() < 0.10  # 10% chance
 
     if is_fraud:
-        amount = random.uniform(500,800) #high amount
+        amount = random.uniform(2000,5000) #high amount
         merchent = random.choice(sketchy_merchants)
     else: 
         amount = random.uniform(5,500) #normal amount
