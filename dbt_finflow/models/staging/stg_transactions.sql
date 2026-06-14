@@ -4,7 +4,7 @@
 -- Final SELECT — output everything including processed_at
 
 with source as (
-    SELECT * from {{source('olist_raw','RAW_TRANSACTIONS')}}
+    SELECT * from {{source('finflow_bronze','RAW_TRANSACTIONS')}}
 ),
 deduplicate as (
     select *, ROW_NUMBER() OVER (PARTITION BY TRANSACTION_ID
