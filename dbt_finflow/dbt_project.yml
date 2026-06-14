@@ -1,0 +1,28 @@
+name: 'dbt_finflow'
+version: '1.0.0'
+config-version: 2
+
+profile: 'dbt_finflow'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  dbt_finflow:
+    staging:
+      +schema: SILVER
+      +materialized: view
+    silver:
+      +schema: SILVER
+      +materialized: table
+    gold:
+      +schema: GOLD
+      +materialized: table

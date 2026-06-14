@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: olist_raw
+    database: FINFLOW
+    schema: BRONZE
+    tables:
+      - name: RAW_TRANSACTIONS

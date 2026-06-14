@@ -1,0 +1,621 @@
+[0m10:37:54.849829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d17490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d1cd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d32250>]}
+
+
+============================== 10:37:54.853155 | 81cd7b54-40f3-4fe1-ac74-a8bb5bedee30 ==============================
+[0m10:37:54.853155 [info ] [MainThread]: Running with dbt=1.11.11
+[0m10:37:54.853490 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'debug': 'False', 'use_colors': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'profiles_dir': '/Users/parin/.dbt', 'partial_parse': 'True', 'write_json': 'True', 'no_print': 'None', 'fail_fast': 'False', 'indirect_selection': 'eager', 'warn_error': 'None', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'target_path': 'None', 'use_experimental_parser': 'False', 'static_parser': 'True', 'introspect': 'True', 'log_path': 'logs', 'printer_width': '80', 'empty': 'None'}
+[0m10:37:54.864820 [info ] [MainThread]: dbt version: 1.11.11
+[0m10:37:54.865068 [info ] [MainThread]: python version: 3.11.5
+[0m10:37:54.865235 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.11/bin/python3
+[0m10:37:54.865381 [info ] [MainThread]: os info: macOS-15.0.1-arm64-arm-64bit
+[0m10:37:55.607952 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m10:37:55.608258 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m10:37:55.608415 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m10:37:55.643712 [info ] [MainThread]: Using profiles dir at /Users/parin/.dbt
+[0m10:37:55.643940 [info ] [MainThread]: Using profiles.yml file at /Users/parin/.dbt/profiles.yml
+[0m10:37:55.644098 [info ] [MainThread]: Using dbt_project.yml file at /Users/parin/Documents/finflow_analytics/dbt_finflow/dbt_project.yml
+[0m10:37:55.644486 [info ] [MainThread]: adapter type: snowflake
+[0m10:37:55.644710 [info ] [MainThread]: adapter version: 1.11.5
+[0m10:37:55.644887 [info ] [MainThread]: Configuration:
+[0m10:37:55.645028 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:37:55.645163 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m10:37:55.645291 [info ] [MainThread]: Required dependencies:
+[0m10:37:55.645461 [debug] [MainThread]: Executing "git --help"
+[0m10:37:55.667666 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:37:55.668576 [debug] [MainThread]: STDERR: "b''"
+[0m10:37:55.668909 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:37:55.669104 [info ] [MainThread]: Connection:
+[0m10:37:55.669288 [info ] [MainThread]:   account: AMRJGLO-JC74238
+[0m10:37:55.669418 [info ] [MainThread]:   user: PARINTHAOKAR
+[0m10:37:55.669540 [info ] [MainThread]:   database: FINFLOW
+[0m10:37:55.669658 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m10:37:55.669774 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m10:37:55.669890 [info ] [MainThread]:   schema: SILVER
+[0m10:37:55.670006 [info ] [MainThread]:   authenticator: None
+[0m10:37:55.670123 [info ] [MainThread]:   oauth_client_id: None
+[0m10:37:55.670237 [info ] [MainThread]:   query_tag: None
+[0m10:37:55.670351 [info ] [MainThread]:   client_session_keep_alive: False
+[0m10:37:55.670467 [info ] [MainThread]:   host: None
+[0m10:37:55.670581 [info ] [MainThread]:   port: None
+[0m10:37:55.670695 [info ] [MainThread]:   proxy_host: None
+[0m10:37:55.670810 [info ] [MainThread]:   proxy_port: None
+[0m10:37:55.670922 [info ] [MainThread]:   protocol: None
+[0m10:37:55.671037 [info ] [MainThread]:   connect_retries: 1
+[0m10:37:55.671148 [info ] [MainThread]:   connect_timeout: None
+[0m10:37:55.671260 [info ] [MainThread]:   retry_on_database_errors: False
+[0m10:37:55.671376 [info ] [MainThread]:   retry_all: False
+[0m10:37:55.671487 [info ] [MainThread]:   insecure_mode: False
+[0m10:37:55.671602 [info ] [MainThread]:   reuse_connections: True
+[0m10:37:55.671717 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m10:37:55.671836 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m10:37:55.672131 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m10:37:55.745026 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m10:37:55.783829 [debug] [MainThread]: Using snowflake connection "debug"
+[0m10:37:55.784037 [debug] [MainThread]: On debug: select 1 as id
+[0m10:37:55.784176 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:37:56.739222 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m10:37:56.739975 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m10:37:56.740548 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m10:37:56.741108 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m10:37:56.741509 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/parin/Documents/finflow_analytics/dbt_finflow/dbt_project.yml> not found
+
+[0m10:37:56.741917 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001 (08001): Failed to connect to DB: AMRJGLO-JC74238.snowflakecomputing.com:443. Failed to authenticate: MFA authentication is required, but none of your current MFA methods are supported for programmatic authentication.
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m10:37:56.745674 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.9521719, "process_in_blocks": "0", "process_kernel_time": 0.314104, "process_mem_max_rss": "216252416", "process_out_blocks": "0", "process_user_time": 1.241388}
+[0m10:37:56.746288 [debug] [MainThread]: Command `dbt debug` failed at 10:37:56.746185 after 1.95 seconds
+[0m10:37:56.746690 [debug] [MainThread]: Connection 'debug' was left open.
+[0m10:37:56.746985 [debug] [MainThread]: On debug: No close available on handle
+[0m10:37:56.747352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d17710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c7130d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b84e750>]}
+[0m10:37:56.747980 [debug] [MainThread]: Flushing usage events
+[0m10:37:56.855723 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:38:20.062934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10721d490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d0cd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d225d0>]}
+
+
+============================== 10:38:20.067566 | c2e881d4-ae05-496d-8c9b-5139dbf4ca4a ==============================
+[0m10:38:20.067566 [info ] [MainThread]: Running with dbt=1.11.11
+[0m10:38:20.067920 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'quiet': 'False', 'profiles_dir': '/Users/parin/.dbt', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'write_json': 'True', 'empty': 'None', 'static_parser': 'True', 'warn_error': 'None', 'partial_parse': 'True', 'printer_width': '80', 'target_path': 'None', 'fail_fast': 'False', 'no_print': 'None', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'log_cache_events': 'False', 'introspect': 'True', 'log_format': 'default', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager'}
+[0m10:38:20.085671 [info ] [MainThread]: dbt version: 1.11.11
+[0m10:38:20.085969 [info ] [MainThread]: python version: 3.11.5
+[0m10:38:20.086187 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.11/bin/python3
+[0m10:38:20.086364 [info ] [MainThread]: os info: macOS-15.0.1-arm64-arm-64bit
+[0m10:38:20.855574 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m10:38:20.855863 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m10:38:20.856019 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m10:38:20.889809 [info ] [MainThread]: Using profiles dir at /Users/parin/.dbt
+[0m10:38:20.890056 [info ] [MainThread]: Using profiles.yml file at /Users/parin/.dbt/profiles.yml
+[0m10:38:20.890203 [info ] [MainThread]: Using dbt_project.yml file at /Users/parin/Documents/finflow_analytics/dbt_finflow/dbt_project.yml
+[0m10:38:20.890537 [info ] [MainThread]: adapter type: snowflake
+[0m10:38:20.890692 [info ] [MainThread]: adapter version: 1.11.5
+[0m10:38:20.890847 [info ] [MainThread]: Configuration:
+[0m10:38:20.890983 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:38:20.891110 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m10:38:20.891236 [info ] [MainThread]: Required dependencies:
+[0m10:38:20.891424 [debug] [MainThread]: Executing "git --help"
+[0m10:38:20.907185 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:38:20.907713 [debug] [MainThread]: STDERR: "b''"
+[0m10:38:20.907904 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:38:20.908077 [info ] [MainThread]: Connection:
+[0m10:38:20.908256 [info ] [MainThread]:   account: AMRJGLO-JC74238
+[0m10:38:20.908387 [info ] [MainThread]:   user: PARINTHAOKAR
+[0m10:38:20.908504 [info ] [MainThread]:   database: FINFLOW
+[0m10:38:20.908623 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m10:38:20.908745 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m10:38:20.908861 [info ] [MainThread]:   schema: SILVER
+[0m10:38:20.908975 [info ] [MainThread]:   authenticator: None
+[0m10:38:20.909091 [info ] [MainThread]:   oauth_client_id: None
+[0m10:38:20.909207 [info ] [MainThread]:   query_tag: None
+[0m10:38:20.909323 [info ] [MainThread]:   client_session_keep_alive: False
+[0m10:38:20.909438 [info ] [MainThread]:   host: None
+[0m10:38:20.909556 [info ] [MainThread]:   port: None
+[0m10:38:20.909669 [info ] [MainThread]:   proxy_host: None
+[0m10:38:20.909783 [info ] [MainThread]:   proxy_port: None
+[0m10:38:20.909895 [info ] [MainThread]:   protocol: None
+[0m10:38:20.910008 [info ] [MainThread]:   connect_retries: 1
+[0m10:38:20.910117 [info ] [MainThread]:   connect_timeout: None
+[0m10:38:20.910230 [info ] [MainThread]:   retry_on_database_errors: False
+[0m10:38:20.910545 [info ] [MainThread]:   retry_all: False
+[0m10:38:20.910753 [info ] [MainThread]:   insecure_mode: False
+[0m10:38:20.910958 [info ] [MainThread]:   reuse_connections: True
+[0m10:38:20.911129 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m10:38:20.911272 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m10:38:20.911568 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m10:38:20.992497 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m10:38:21.023944 [debug] [MainThread]: Using snowflake connection "debug"
+[0m10:38:21.024134 [debug] [MainThread]: On debug: select 1 as id
+[0m10:38:21.024264 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:38:21.668302 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.644 seconds
+[0m10:38:21.669862 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m10:38:21.670381 [info ] [MainThread]: [31m1 check failed:[0m
+[0m10:38:21.670827 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/parin/Documents/finflow_analytics/dbt_finflow/dbt_project.yml> not found
+
+[0m10:38:21.675160 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.6685903, "process_in_blocks": "0", "process_kernel_time": 0.311223, "process_mem_max_rss": "212336640", "process_out_blocks": "0", "process_user_time": 1.100526}
+[0m10:38:21.675711 [debug] [MainThread]: Command `dbt debug` failed at 10:38:21.675611 after 1.67 seconds
+[0m10:38:21.676120 [debug] [MainThread]: Connection 'debug' was left open.
+[0m10:38:21.676482 [debug] [MainThread]: On debug: Close
+[0m10:38:21.801075 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1050ec410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109bdd510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105113b10>]}
+[0m10:38:21.802457 [debug] [MainThread]: Flushing usage events
+[0m10:38:21.924139 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:39:17.020605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c4cabd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c50cc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c507810>]}
+
+
+============================== 10:39:17.023351 | 9a1659bb-c962-4229-9ce0-262f7eb02932 ==============================
+[0m10:39:17.023351 [info ] [MainThread]: Running with dbt=1.11.11
+[0m10:39:17.023662 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'log_path': 'logs', 'write_json': 'True', 'debug': 'False', 'no_print': 'None', 'static_parser': 'True', 'profiles_dir': '/Users/parin/.dbt', 'target_path': 'None', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'introspect': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'partial_parse': 'True', 'warn_error': 'None', 'quiet': 'False', 'fail_fast': 'False', 'empty': 'None', 'log_format': 'default', 'use_colors': 'True'}
+[0m10:39:17.033858 [info ] [MainThread]: dbt version: 1.11.11
+[0m10:39:17.034077 [info ] [MainThread]: python version: 3.11.5
+[0m10:39:17.034246 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.11/bin/python3
+[0m10:39:17.034389 [info ] [MainThread]: os info: macOS-15.0.1-arm64-arm-64bit
+[0m10:39:17.720406 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m10:39:17.720701 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m10:39:17.720858 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m10:39:17.754312 [info ] [MainThread]: Using profiles dir at /Users/parin/.dbt
+[0m10:39:17.754546 [info ] [MainThread]: Using profiles.yml file at /Users/parin/.dbt/profiles.yml
+[0m10:39:17.754707 [info ] [MainThread]: Using dbt_project.yml file at /Users/parin/Documents/finflow_analytics/dbt_finflow/dbt_project.yml
+[0m10:39:17.755226 [info ] [MainThread]: adapter type: snowflake
+[0m10:39:17.755407 [info ] [MainThread]: adapter version: 1.11.5
+[0m10:39:17.755561 [info ] [MainThread]: Configuration:
+[0m10:39:17.755699 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:39:17.755829 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m10:39:17.755983 [info ] [MainThread]: Required dependencies:
+[0m10:39:17.756143 [debug] [MainThread]: Executing "git --help"
+[0m10:39:17.780974 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:39:17.781472 [debug] [MainThread]: STDERR: "b''"
+[0m10:39:17.781652 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:39:17.781822 [info ] [MainThread]: Connection:
+[0m10:39:17.782000 [info ] [MainThread]:   account: AMRJGLO-JC74238
+[0m10:39:17.782128 [info ] [MainThread]:   user: PARINTHAOKAR
+[0m10:39:17.782247 [info ] [MainThread]:   database: FINFLOW
+[0m10:39:17.782366 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m10:39:17.782481 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m10:39:17.782597 [info ] [MainThread]:   schema: SILVER
+[0m10:39:17.782712 [info ] [MainThread]:   authenticator: None
+[0m10:39:17.782833 [info ] [MainThread]:   oauth_client_id: None
+[0m10:39:17.782950 [info ] [MainThread]:   query_tag: None
+[0m10:39:17.783066 [info ] [MainThread]:   client_session_keep_alive: False
+[0m10:39:17.783183 [info ] [MainThread]:   host: None
+[0m10:39:17.783295 [info ] [MainThread]:   port: None
+[0m10:39:17.783411 [info ] [MainThread]:   proxy_host: None
+[0m10:39:17.783525 [info ] [MainThread]:   proxy_port: None
+[0m10:39:17.783638 [info ] [MainThread]:   protocol: None
+[0m10:39:17.783753 [info ] [MainThread]:   connect_retries: 1
+[0m10:39:17.783864 [info ] [MainThread]:   connect_timeout: None
+[0m10:39:17.783979 [info ] [MainThread]:   retry_on_database_errors: False
+[0m10:39:17.784096 [info ] [MainThread]:   retry_all: False
+[0m10:39:17.784208 [info ] [MainThread]:   insecure_mode: False
+[0m10:39:17.784472 [info ] [MainThread]:   reuse_connections: True
+[0m10:39:17.784704 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m10:39:17.784952 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m10:39:17.785342 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m10:39:17.855850 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m10:39:17.882926 [debug] [MainThread]: Using snowflake connection "debug"
+[0m10:39:17.883115 [debug] [MainThread]: On debug: select 1 as id
+[0m10:39:17.883248 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:39:18.725317 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.842 seconds
+[0m10:39:18.728228 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m10:39:18.729075 [info ] [MainThread]: [31m1 check failed:[0m
+[0m10:39:18.729593 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/parin/Documents/finflow_analytics/dbt_finflow/dbt_project.yml> not found
+
+[0m10:39:18.734295 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.761821, "process_in_blocks": "0", "process_kernel_time": 0.312941, "process_mem_max_rss": "213532672", "process_out_blocks": "0", "process_user_time": 1.096028}
+[0m10:39:18.735254 [debug] [MainThread]: Command `dbt debug` failed at 10:39:18.735026 after 1.76 seconds
+[0m10:39:18.735843 [debug] [MainThread]: Connection 'debug' was left open.
+[0m10:39:18.736340 [debug] [MainThread]: On debug: Close
+[0m10:39:18.834513 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119421050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dac9690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ce34810>]}
+[0m10:39:18.835457 [debug] [MainThread]: Flushing usage events
+[0m10:39:18.960698 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:42:05.426611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f845d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10900cd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090216d0>]}
+
+
+============================== 10:42:05.429684 | 30c1232a-2b24-4772-a9ab-aa9ba1bf9474 ==============================
+[0m10:42:05.429684 [info ] [MainThread]: Running with dbt=1.11.11
+[0m10:42:05.429994 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'static_parser': 'True', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'warn_error': 'None', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'printer_width': '80', 'fail_fast': 'False', 'empty': 'None', 'log_format': 'default', 'profiles_dir': '/Users/parin/.dbt', 'use_experimental_parser': 'False', 'version_check': 'True', 'partial_parse': 'True', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'target_path': 'None', 'debug': 'False', 'no_print': 'None', 'quiet': 'False'}
+[0m10:42:05.440564 [info ] [MainThread]: dbt version: 1.11.11
+[0m10:42:05.440813 [info ] [MainThread]: python version: 3.11.5
+[0m10:42:05.440979 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.11/bin/python3
+[0m10:42:05.441125 [info ] [MainThread]: os info: macOS-15.0.1-arm64-arm-64bit
+[0m10:42:06.252000 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m10:42:06.252288 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m10:42:06.252445 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m10:42:06.285945 [info ] [MainThread]: Using profiles dir at /Users/parin/.dbt
+[0m10:42:06.286202 [info ] [MainThread]: Using profiles.yml file at /Users/parin/.dbt/profiles.yml
+[0m10:42:06.286394 [info ] [MainThread]: Using dbt_project.yml file at /Users/parin/Documents/finflow_analytics/dbt_finflow/dbt_project.yml
+[0m10:42:06.286765 [info ] [MainThread]: adapter type: snowflake
+[0m10:42:06.286951 [info ] [MainThread]: adapter version: 1.11.5
+[0m10:42:06.341235 [info ] [MainThread]: Configuration:
+[0m10:42:06.341506 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:42:06.341662 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m10:42:06.341798 [info ] [MainThread]: Required dependencies:
+[0m10:42:06.341981 [debug] [MainThread]: Executing "git --help"
+[0m10:42:06.359504 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:42:06.360036 [debug] [MainThread]: STDERR: "b''"
+[0m10:42:06.360225 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:42:06.360392 [info ] [MainThread]: Connection:
+[0m10:42:06.360579 [info ] [MainThread]:   account: AMRJGLO-JC74238
+[0m10:42:06.360761 [info ] [MainThread]:   user: PARINTHAOKAR
+[0m10:42:06.360886 [info ] [MainThread]:   database: FINFLOW
+[0m10:42:06.361007 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m10:42:06.361127 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m10:42:06.361244 [info ] [MainThread]:   schema: SILVER
+[0m10:42:06.361362 [info ] [MainThread]:   authenticator: None
+[0m10:42:06.361484 [info ] [MainThread]:   oauth_client_id: None
+[0m10:42:06.361603 [info ] [MainThread]:   query_tag: None
+[0m10:42:06.361725 [info ] [MainThread]:   client_session_keep_alive: False
+[0m10:42:06.361844 [info ] [MainThread]:   host: None
+[0m10:42:06.361958 [info ] [MainThread]:   port: None
+[0m10:42:06.362077 [info ] [MainThread]:   proxy_host: None
+[0m10:42:06.362425 [info ] [MainThread]:   proxy_port: None
+[0m10:42:06.362552 [info ] [MainThread]:   protocol: None
+[0m10:42:06.362681 [info ] [MainThread]:   connect_retries: 1
+[0m10:42:06.362824 [info ] [MainThread]:   connect_timeout: None
+[0m10:42:06.362944 [info ] [MainThread]:   retry_on_database_errors: False
+[0m10:42:06.363064 [info ] [MainThread]:   retry_all: False
+[0m10:42:06.363181 [info ] [MainThread]:   insecure_mode: False
+[0m10:42:06.363296 [info ] [MainThread]:   reuse_connections: True
+[0m10:42:06.363411 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m10:42:06.363530 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m10:42:06.363830 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m10:42:06.469175 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m10:42:06.497134 [debug] [MainThread]: Using snowflake connection "debug"
+[0m10:42:06.497336 [debug] [MainThread]: On debug: select 1 as id
+[0m10:42:06.497469 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:42:07.226989 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.729 seconds
+[0m10:42:07.228618 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m10:42:07.229124 [info ] [MainThread]: [32mAll checks passed![0m
+[0m10:42:07.233456 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.8565935, "process_in_blocks": "0", "process_kernel_time": 0.33953, "process_mem_max_rss": "211386368", "process_out_blocks": "0", "process_user_time": 1.199249}
+[0m10:42:07.234001 [debug] [MainThread]: Command `dbt debug` succeeded at 10:42:07.233897 after 1.86 seconds
+[0m10:42:07.234381 [debug] [MainThread]: Connection 'debug' was left open.
+[0m10:42:07.234859 [debug] [MainThread]: On debug: Close
+[0m10:42:07.339276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10900c250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f7bc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ff1f810>]}
+[0m10:42:07.340000 [debug] [MainThread]: Flushing usage events
+[0m10:42:07.454586 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:14:20.515922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105baab90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cb2c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cb32d0>]}
+
+
+============================== 13:14:20.518802 | a99d8e2c-cb1f-4cd7-9ede-e3a88f9353d0 ==============================
+[0m13:14:20.518802 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:14:20.519122 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'indirect_selection': 'eager', 'quiet': 'False', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'empty': 'False', 'partial_parse': 'True', 'target_path': 'None', 'log_cache_events': 'False', 'write_json': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'profiles_dir': '/Users/parin/.dbt', 'warn_error': 'None', 'cache_selected_only': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'version_check': 'True', 'static_parser': 'True'}
+[0m13:14:21.463130 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:14:21.463423 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:14:21.463589 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:14:21.602734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a99d8e2c-cb1f-4cd7-9ede-e3a88f9353d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10890d390>]}
+[0m13:14:21.636073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a99d8e2c-cb1f-4cd7-9ede-e3a88f9353d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105abe890>]}
+[0m13:14:21.636596 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m13:14:21.710270 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:14:21.710702 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:14:21.710907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a99d8e2c-cb1f-4cd7-9ede-e3a88f9353d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f5b83d0>]}
+[0m13:14:22.340089 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_finflow.gold
+- models.dbt_finflow.silver
+[0m13:14:22.344723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a99d8e2c-cb1f-4cd7-9ede-e3a88f9353d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe1be10>]}
+[0m13:14:22.385882 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m13:14:22.387023 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m13:14:22.392932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a99d8e2c-cb1f-4cd7-9ede-e3a88f9353d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fc92910>]}
+[0m13:14:22.393164 [info ] [MainThread]: Found 1 model, 1 source, 536 macros
+[0m13:14:22.393336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a99d8e2c-cb1f-4cd7-9ede-e3a88f9353d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fbc4a50>]}
+[0m13:14:22.394067 [info ] [MainThread]: 
+[0m13:14:22.394232 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:14:22.394364 [info ] [MainThread]: 
+[0m13:14:22.394585 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:14:22.394976 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINFLOW'
+[0m13:14:22.426812 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m13:14:22.427034 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m13:14:22.427186 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:14:23.072367 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m13:14:23.073426 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m13:14:23.074103 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m13:14:23.074522 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m13:14:23.075683 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:14:23.076091 [debug] [MainThread]: Connection 'list_FINFLOW' was left open.
+[0m13:14:23.076478 [debug] [MainThread]: On list_FINFLOW: No close available on handle
+[0m13:14:23.076891 [info ] [MainThread]: 
+[0m13:14:23.077559 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.68 seconds (0.68s).
+[0m13:14:23.078804 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "FINFLOW"
+  Database Error
+    250001 (08001): Failed to connect to DB: AMRJGLO-JC74238.snowflakecomputing.com:443. Failed to authenticate: MFA authentication is required, but none of your current MFA methods are supported for programmatic authentication.
+[0m13:14:23.112914 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.6485431, "process_in_blocks": "0", "process_kernel_time": 0.357946, "process_mem_max_rss": "228425728", "process_out_blocks": "0", "process_user_time": 1.798775}
+[0m13:14:23.113564 [debug] [MainThread]: Command `dbt run` failed at 13:14:23.113469 after 2.65 seconds
+[0m13:14:23.114032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101018450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ae67d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10103fb50>]}
+[0m13:14:23.114484 [debug] [MainThread]: Flushing usage events
+[0m13:14:23.227790 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:14:52.763186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119284390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119386c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119387290>]}
+
+
+============================== 13:14:52.766197 | 97938fe4-94b6-491a-888a-da208ae17f15 ==============================
+[0m13:14:52.766197 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:14:52.766515 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'profiles_dir': '/Users/parin/.dbt', 'printer_width': '80', 'debug': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'write_json': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'static_parser': 'True', 'target_path': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'fail_fast': 'False', 'warn_error': 'None', 'invocation_command': 'dbt run', 'partial_parse': 'True'}
+[0m13:14:53.512389 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:14:53.512702 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:14:53.512869 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:14:53.625921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '97938fe4-94b6-491a-888a-da208ae17f15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fc4e790>]}
+[0m13:14:53.659543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '97938fe4-94b6-491a-888a-da208ae17f15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118f92a90>]}
+[0m13:14:53.660070 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m13:14:53.734448 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:14:53.813553 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:14:53.813764 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:14:53.813902 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:14:53.816501 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_finflow.gold
+- models.dbt_finflow.silver
+[0m13:14:53.844066 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '97938fe4-94b6-491a-888a-da208ae17f15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12d432c90>]}
+[0m13:14:53.931521 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m13:14:53.932981 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m13:14:53.938981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '97938fe4-94b6-491a-888a-da208ae17f15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12cf44950>]}
+[0m13:14:53.939248 [info ] [MainThread]: Found 1 model, 1 source, 536 macros
+[0m13:14:53.939422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '97938fe4-94b6-491a-888a-da208ae17f15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12d52b490>]}
+[0m13:14:53.940248 [info ] [MainThread]: 
+[0m13:14:53.940446 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:14:53.940623 [info ] [MainThread]: 
+[0m13:14:53.940879 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:14:53.941358 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINFLOW'
+[0m13:14:53.975610 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m13:14:53.975885 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m13:14:53.976044 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:14:54.660530 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m13:14:54.661565 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m13:14:54.662298 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m13:14:54.662714 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m13:14:54.664231 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:14:54.664756 [debug] [MainThread]: Connection 'list_FINFLOW' was left open.
+[0m13:14:54.665193 [debug] [MainThread]: On list_FINFLOW: No close available on handle
+[0m13:14:54.665656 [info ] [MainThread]: 
+[0m13:14:54.666178 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.72 seconds (0.72s).
+[0m13:14:54.666950 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "FINFLOW"
+  Database Error
+    250001 (08001): Failed to connect to DB: AMRJGLO-JC74238.snowflakecomputing.com:443. Failed to authenticate: MFA authentication is required, but none of your current MFA methods are supported for programmatic authentication.
+[0m13:14:54.673986 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.9596522, "process_in_blocks": "0", "process_kernel_time": 0.355013, "process_mem_max_rss": "219774976", "process_out_blocks": "0", "process_user_time": 1.3235}
+[0m13:14:54.674413 [debug] [MainThread]: Command `dbt run` failed at 13:14:54.674359 after 1.96 seconds
+[0m13:14:54.674866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119361b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119360410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12cf241d0>]}
+[0m13:14:54.675126 [debug] [MainThread]: Flushing usage events
+[0m13:14:54.766924 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:15:12.509016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073fd9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074fedd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074ff450>]}
+
+
+============================== 13:15:12.511781 | 6ba71b1a-5290-4304-a1d6-ccddcf737bab ==============================
+[0m13:15:12.511781 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:15:12.512088 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'printer_width': '80', 'static_parser': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/parin/.dbt', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'use_colors': 'True', 'fail_fast': 'False', 'no_print': 'None', 'log_cache_events': 'False', 'empty': 'False', 'write_json': 'True', 'debug': 'False', 'warn_error': 'None'}
+[0m13:15:13.223986 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:15:13.224275 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:15:13.224440 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:15:13.363614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6ba71b1a-5290-4304-a1d6-ccddcf737bab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dea3c50>]}
+[0m13:15:13.397234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6ba71b1a-5290-4304-a1d6-ccddcf737bab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10730a6d0>]}
+[0m13:15:13.397795 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m13:15:13.472554 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:15:13.559003 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:15:13.559236 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:15:13.559373 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:15:13.562094 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_finflow.silver
+- models.dbt_finflow.gold
+[0m13:15:13.575976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6ba71b1a-5290-4304-a1d6-ccddcf737bab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e3705d0>]}
+[0m13:15:13.619867 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m13:15:13.620971 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m13:15:13.626466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6ba71b1a-5290-4304-a1d6-ccddcf737bab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10df99950>]}
+[0m13:15:13.626698 [info ] [MainThread]: Found 1 model, 1 source, 536 macros
+[0m13:15:13.626866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6ba71b1a-5290-4304-a1d6-ccddcf737bab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10df6ea50>]}
+[0m13:15:13.627628 [info ] [MainThread]: 
+[0m13:15:13.627790 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:15:13.627920 [info ] [MainThread]: 
+[0m13:15:13.628151 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:15:13.628542 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINFLOW'
+[0m13:15:13.662969 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m13:15:13.663194 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m13:15:13.663347 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:15:14.435605 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.772 seconds
+[0m13:15:14.437719 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_FINFLOW, now create_FINFLOW_SILVER_SILVER)
+[0m13:15:14.438230 [debug] [ThreadPool]: Creating schema "database: "FINFLOW"
+schema: "SILVER_SILVER"
+"
+[0m13:15:14.444090 [debug] [ThreadPool]: Using snowflake connection "create_FINFLOW_SILVER_SILVER"
+[0m13:15:14.444533 [debug] [ThreadPool]: On create_FINFLOW_SILVER_SILVER: create schema if not exists FINFLOW.SILVER_SILVER
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "create_FINFLOW_SILVER_SILVER"} */
+[0m13:15:14.579794 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.135 seconds
+[0m13:15:14.600268 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_FINFLOW_SILVER_SILVER, now list_FINFLOW_SILVER_SILVER)
+[0m13:15:14.614974 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW_SILVER_SILVER"
+[0m13:15:14.615277 [debug] [ThreadPool]: On list_FINFLOW_SILVER_SILVER: show objects in FINFLOW.SILVER_SILVER
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW_SILVER_SILVER"} */;
+[0m13:15:14.699463 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.084 seconds
+[0m13:15:14.702689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6ba71b1a-5290-4304-a1d6-ccddcf737bab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e1fd610>]}
+[0m13:15:14.706401 [debug] [Thread-2 (]: Began running node model.dbt_finflow.stg_transactions
+[0m13:15:14.707137 [info ] [Thread-2 (]: 1 of 1 START sql view model SILVER_SILVER.stg_transactions ..................... [RUN]
+[0m13:15:14.707791 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FINFLOW_SILVER_SILVER, now model.dbt_finflow.stg_transactions)
+[0m13:15:14.709035 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.stg_transactions
+[0m13:15:14.720529 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.stg_transactions"
+[0m13:15:14.722169 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.stg_transactions
+[0m13:15:14.749362 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.stg_transactions"
+[0m13:15:14.750564 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.stg_transactions"
+[0m13:15:14.750844 [debug] [Thread-2 (]: On model.dbt_finflow.stg_transactions: create or replace   view FINFLOW.SILVER_SILVER.stg_transactions
+  
+  
+  
+  
+  as (
+    with stage as (
+    SELECT * from FINFLOW.BRONZE.RAW_TRANSACTIONS
+)
+
+select transaction_id,user_id,MERCHANT_ID,round(AMOUNT,2),TIMESTAMP,LOCATION, DEVICE_TYPE, IS_FRAUD, COUNT(*) as occurrence_count
+from stage
+  )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.stg_transactions"} */;
+[0m13:15:14.902835 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c50c4b-0105-ea30-000e-5cbe001f5fca
+[0m13:15:14.903240 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002022 (42601): SQL compilation error:
+Missing column specification
+[0m13:15:14.906759 [debug] [Thread-2 (]: Database Error in model stg_transactions (models/staging/stg_transactions.sql)
+  002022 (42601): SQL compilation error:
+  Missing column specification
+  compiled code at target/run/dbt_finflow/models/staging/stg_transactions.sql
+[0m13:15:14.908690 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6ba71b1a-5290-4304-a1d6-ccddcf737bab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e3323d0>]}
+[0m13:15:14.909183 [error] [Thread-2 (]: 1 of 1 ERROR creating sql view model SILVER_SILVER.stg_transactions ............ [[31mERROR[0m in 0.20s]
+[0m13:15:14.909565 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.stg_transactions
+[0m13:15:14.909928 [debug] [Thread-5 (]: Marking all children of 'model.dbt_finflow.stg_transactions' to be skipped because of status 'error'.  Reason: Database Error in model stg_transactions (models/staging/stg_transactions.sql)
+  002022 (42601): SQL compilation error:
+  Missing column specification
+  compiled code at target/run/dbt_finflow/models/staging/stg_transactions.sql.
+[0m13:15:14.910966 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:15:14.911159 [debug] [MainThread]: Connection 'model.dbt_finflow.stg_transactions' was left open.
+[0m13:15:14.911339 [debug] [MainThread]: On model.dbt_finflow.stg_transactions: Close
+[0m13:15:15.014149 [info ] [MainThread]: 
+[0m13:15:15.014631 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.39 seconds (1.39s).
+[0m13:15:15.015321 [debug] [MainThread]: Command end result
+[0m13:15:15.099164 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m13:15:15.100139 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m13:15:15.103154 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/run_results.json
+[0m13:15:15.103350 [info ] [MainThread]: 
+[0m13:15:15.103558 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:15:15.103711 [info ] [MainThread]: 
+[0m13:15:15.103898 [error] [MainThread]: [31mFailure in model stg_transactions (models/staging/stg_transactions.sql)[0m
+[0m13:15:15.104069 [error] [MainThread]:   Database Error in model stg_transactions (models/staging/stg_transactions.sql)
+  002022 (42601): SQL compilation error:
+  Missing column specification
+  compiled code at target/run/dbt_finflow/models/staging/stg_transactions.sql
+[0m13:15:15.104206 [info ] [MainThread]: 
+[0m13:15:15.104365 [info ] [MainThread]:   compiled code at target/compiled/dbt_finflow/models/staging/stg_transactions.sql
+[0m13:15:15.104493 [info ] [MainThread]: 
+[0m13:15:15.104634 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:15:15.109602 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.6500318, "process_in_blocks": "0", "process_kernel_time": 0.349454, "process_mem_max_rss": "220856320", "process_out_blocks": "0", "process_user_time": 1.444978}
+[0m13:15:15.109829 [debug] [MainThread]: Command `dbt run` failed at 13:15:15.109793 after 2.65 seconds
+[0m13:15:15.110032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102864450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102865690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1152b0e90>]}
+[0m13:15:15.110211 [debug] [MainThread]: Flushing usage events
+[0m13:15:15.210890 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:17:10.133213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ba9b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107caab50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cab1d0>]}
+
+
+============================== 13:17:10.136082 | 4081bcfa-92e4-4344-a4c7-0d6ff2e488c1 ==============================
+[0m13:17:10.136082 [info ] [MainThread]: Running with dbt=1.11.11
+[0m13:17:10.136425 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'warn_error': 'None', 'invocation_command': 'dbt run', 'cache_selected_only': 'False', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'introspect': 'True', 'profiles_dir': '/Users/parin/.dbt', 'partial_parse': 'True', 'debug': 'False', 'printer_width': '80', 'log_cache_events': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'no_print': 'None', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'log_format': 'default', 'write_json': 'True', 'fail_fast': 'False', 'version_check': 'True', 'quiet': 'False'}
+[0m13:17:10.906913 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:17:10.907224 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:17:10.907384 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:17:11.057481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4081bcfa-92e4-4344-a4c7-0d6ff2e488c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10753d610>]}
+[0m13:17:11.091175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4081bcfa-92e4-4344-a4c7-0d6ff2e488c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ab6810>]}
+[0m13:17:11.091747 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m13:17:11.168090 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m13:17:11.249718 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:17:11.249988 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/staging/stg_transactions.sql
+[0m13:17:11.387964 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_finflow.gold
+- models.dbt_finflow.silver
+[0m13:17:11.393754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4081bcfa-92e4-4344-a4c7-0d6ff2e488c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1112e2d50>]}
+[0m13:17:11.449907 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m13:17:11.451161 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m13:17:11.456846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4081bcfa-92e4-4344-a4c7-0d6ff2e488c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb28a90>]}
+[0m13:17:11.457082 [info ] [MainThread]: Found 1 model, 1 source, 536 macros
+[0m13:17:11.457251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4081bcfa-92e4-4344-a4c7-0d6ff2e488c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111537dd0>]}
+[0m13:17:11.458020 [info ] [MainThread]: 
+[0m13:17:11.458208 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:17:11.458339 [info ] [MainThread]: 
+[0m13:17:11.458567 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:17:11.458976 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINFLOW'
+[0m13:17:11.535010 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m13:17:11.535267 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m13:17:11.535411 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:17:12.280403 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.745 seconds
+[0m13:17:12.284761 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_FINFLOW, now list_FINFLOW_SILVER_SILVER)
+[0m13:17:12.298911 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW_SILVER_SILVER"
+[0m13:17:12.299282 [debug] [ThreadPool]: On list_FINFLOW_SILVER_SILVER: show objects in FINFLOW.SILVER_SILVER
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW_SILVER_SILVER"} */;
+[0m13:17:12.410145 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.110 seconds
+[0m13:17:12.413657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4081bcfa-92e4-4344-a4c7-0d6ff2e488c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ea34750>]}
+[0m13:17:12.418637 [debug] [Thread-2 (]: Began running node model.dbt_finflow.stg_transactions
+[0m13:17:12.419485 [info ] [Thread-2 (]: 1 of 1 START sql view model SILVER_SILVER.stg_transactions ..................... [RUN]
+[0m13:17:12.420143 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FINFLOW_SILVER_SILVER, now model.dbt_finflow.stg_transactions)
+[0m13:17:12.420582 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.stg_transactions
+[0m13:17:12.430724 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.stg_transactions"
+[0m13:17:12.432173 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.stg_transactions
+[0m13:17:12.456206 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.stg_transactions"
+[0m13:17:12.457223 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.stg_transactions"
+[0m13:17:12.457522 [debug] [Thread-2 (]: On model.dbt_finflow.stg_transactions: create or replace   view FINFLOW.SILVER_SILVER.stg_transactions
+  
+  
+  
+  
+  as (
+    -- CTE 1: source — just select from Bronze
+-- CTE 2: deduplicate — remove duplicate transaction_ids
+-- CTE 3: clean — round amount, cast types
+-- Final SELECT — output everything including processed_at
+
+with source as (
+    SELECT * from FINFLOW.BRONZE.RAW_TRANSACTIONS
+),
+deduplicate as (
+    select *, ROW_NUMBER() OVER (PARTITION BY TRANSACTION_ID
+    ORDER BY (TIMESTAMP) ) AS rn 
+    FROM source 
+),
+final as (
+    select TRANSACTION_ID, USER_ID, MERCHANT_ID, ROUND(AMOUNT,2) as Amount, TIMESTAMP,LOCATION,DEVICE_TYPE,IS_FRAUD ,
+    from deduplicate 
+    where rn = 1
+
+)
+
+select *, CURRENT_TIMESTAMP() AS processed_at from final
+  )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.stg_transactions"} */;
+[0m13:17:12.879188 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.421 seconds
+[0m13:17:12.911642 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4081bcfa-92e4-4344-a4c7-0d6ff2e488c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111879c10>]}
+[0m13:17:12.912291 [info ] [Thread-2 (]: 1 of 1 OK created sql view model SILVER_SILVER.stg_transactions ................ [[32mSUCCESS 1[0m in 0.49s]
+[0m13:17:12.912785 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.stg_transactions
+[0m13:17:12.913680 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:17:12.913913 [debug] [MainThread]: Connection 'model.dbt_finflow.stg_transactions' was left open.
+[0m13:17:12.914133 [debug] [MainThread]: On model.dbt_finflow.stg_transactions: Close
+[0m13:17:13.035397 [info ] [MainThread]: 
+[0m13:17:13.035830 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.58 seconds (1.58s).
+[0m13:17:13.036400 [debug] [MainThread]: Command end result
+[0m13:17:13.066598 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m13:17:13.067652 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m13:17:13.071247 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/run_results.json
+[0m13:17:13.071441 [info ] [MainThread]: 
+[0m13:17:13.071664 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:17:13.071824 [info ] [MainThread]: 
+[0m13:17:13.071994 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:17:13.073887 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.9905462, "process_in_blocks": "0", "process_kernel_time": 0.365228, "process_mem_max_rss": "223936512", "process_out_blocks": "0", "process_user_time": 1.576271}
+[0m13:17:13.074120 [debug] [MainThread]: Command `dbt run` succeeded at 13:17:13.074080 after 2.99 seconds
+[0m13:17:13.074314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103011510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1030116d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103037bd0>]}
+[0m13:17:13.074506 [debug] [MainThread]: Flushing usage events
+[0m13:17:13.175492 [debug] [MainThread]: An error was encountered while trying to flush usage events

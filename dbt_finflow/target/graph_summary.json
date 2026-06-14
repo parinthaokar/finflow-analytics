@@ -1,0 +1,1 @@
+{"_invocation_id": "4081bcfa-92e4-4344-a4c7-0d6ff2e488c1", "linked": {"0": {"name": "source.dbt_finflow.olist_raw.RAW_TRANSACTIONS", "type": "source", "succ": [1]}, "1": {"name": "model.dbt_finflow.stg_transactions", "type": "model"}}}
