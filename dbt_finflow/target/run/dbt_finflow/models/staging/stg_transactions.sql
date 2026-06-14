@@ -19,7 +19,7 @@ deduplicate as (
     FROM source 
 ),
 final as (
-    select TRANSACTION_ID, USER_ID, MERCHANT_ID, ROUND(AMOUNT,2) as Amount, TIMESTAMP,LOCATION,DEVICE_TYPE,IS_FRAUD ,
+    select TRANSACTION_ID, USER_ID, MERCHANT_ID, ROUND(AMOUNT,2) as Amount, TIMESTAMP,LOCATION,DEVICE_TYPE,IS_FRAUD
     from deduplicate 
     where rn = 1
 

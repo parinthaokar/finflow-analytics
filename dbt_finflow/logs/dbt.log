@@ -619,3 +619,309 @@ select *, CURRENT_TIMESTAMP() AS processed_at from final
 [0m13:17:13.074314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103011510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1030116d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103037bd0>]}
 [0m13:17:13.074506 [debug] [MainThread]: Flushing usage events
 [0m13:17:13.175492 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:06:57.544420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10520d690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10530eb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10530f150>]}
+
+
+============================== 14:06:57.547383 | 6d815728-102a-4872-98da-e231a015bf43 ==============================
+[0m14:06:57.547383 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:06:57.547725 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'warn_error': 'None', 'quiet': 'False', 'debug': 'False', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'no_print': 'None', 'version_check': 'True', 'fail_fast': 'False', 'profiles_dir': '/Users/parin/.dbt', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'printer_width': '80', 'target_path': 'None', 'log_cache_events': 'False'}
+[0m14:06:59.474960 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:06:59.475298 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:06:59.475496 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:06:59.615676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6d815728-102a-4872-98da-e231a015bf43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b57e50>]}
+[0m14:06:59.649265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6d815728-102a-4872-98da-e231a015bf43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10511aa10>]}
+[0m14:06:59.649753 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:06:59.727484 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:06:59.809658 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m14:06:59.809931 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/silver/customer_profiles.sql
+[0m14:06:59.810119 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/staging/stg_transactions.sql
+[0m14:06:59.924932 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_finflow.stg_transactions' (models/staging/stg_transactions.sql) depends on a source named 'finflow_bronze.RAW_TRANSACTIONS' which was not found
+[0m14:06:59.926962 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.4342303, "process_in_blocks": "0", "process_kernel_time": 0.347337, "process_mem_max_rss": "210010112", "process_out_blocks": "0", "process_user_time": 1.329412}
+[0m14:06:59.927250 [debug] [MainThread]: Command `dbt run` failed at 14:06:59.927205 after 2.43 seconds
+[0m14:06:59.927447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052e0dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10402dd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100675810>]}
+[0m14:06:59.927630 [debug] [MainThread]: Flushing usage events
+[0m14:07:00.042749 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:11:29.992147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078a9d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079aa8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079aaf10>]}
+
+
+============================== 14:11:29.995015 | 9c3dbefb-9188-4e6d-a2fc-7dc0af2798b5 ==============================
+[0m14:11:29.995015 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:11:29.995360 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'debug': 'False', 'introspect': 'True', 'quiet': 'False', 'target_path': 'None', 'cache_selected_only': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'write_json': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'static_parser': 'True', 'profiles_dir': '/Users/parin/.dbt', 'partial_parse': 'True', 'warn_error': 'None', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'fail_fast': 'False', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run'}
+[0m14:11:30.737227 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:11:30.737571 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:11:30.737745 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:11:30.884807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9c3dbefb-9188-4e6d-a2fc-7dc0af2798b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106aee790>]}
+[0m14:11:30.918452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9c3dbefb-9188-4e6d-a2fc-7dc0af2798b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077b6750>]}
+[0m14:11:30.919063 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:11:30.994957 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:11:31.076933 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m14:11:31.077200 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/silver/customer_profiles.sql
+[0m14:11:31.077382 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/staging/stg_transactions.sql
+[0m14:11:31.189805 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_finflow.stg_transactions' (models/staging/stg_transactions.sql) depends on a source named 'finflow_bronze.RAW_TRANSACTIONS' which was not found
+[0m14:11:31.191797 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.2502459, "process_in_blocks": "0", "process_kernel_time": 0.306345, "process_mem_max_rss": "214892544", "process_out_blocks": "0", "process_user_time": 1.280002}
+[0m14:11:31.192116 [debug] [MainThread]: Command `dbt run` failed at 14:11:31.192065 after 1.25 seconds
+[0m14:11:31.192330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078a2b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d10450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d10490>]}
+[0m14:11:31.192531 [debug] [MainThread]: Flushing usage events
+[0m14:11:31.300467 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:12:11.478509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a84590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b86810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b86e90>]}
+
+
+============================== 14:12:11.481387 | e8615c85-4af7-4828-a47a-904b1080d965 ==============================
+[0m14:12:11.481387 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:12:11.481718 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'warn_error': 'None', 'profiles_dir': '/Users/parin/.dbt', 'quiet': 'False', 'no_print': 'None', 'use_colors': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'empty': 'False', 'introspect': 'True', 'version_check': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'cache_selected_only': 'False', 'log_format': 'default'}
+[0m14:12:12.207466 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:12:12.207755 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:12:12.207921 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:12:12.311834 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e8615c85-4af7-4828-a47a-904b1080d965', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f604210>]}
+[0m14:12:12.344982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e8615c85-4af7-4828-a47a-904b1080d965', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106892910>]}
+[0m14:12:12.345547 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:12:12.423752 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:12:12.502123 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m14:12:12.502378 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/silver/customer_profiles.sql
+[0m14:12:12.502558 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/staging/stg_transactions.sql
+[0m14:12:12.613344 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_finflow.stg_transactions' (models/staging/stg_transactions.sql) depends on a source named 'finflow_bronze.RAW_TRANSACTIONS' which was not found
+[0m14:12:12.615362 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.1828269, "process_in_blocks": "0", "process_kernel_time": 0.299305, "process_mem_max_rss": "212533248", "process_out_blocks": "0", "process_user_time": 1.244062}
+[0m14:12:12.615634 [debug] [MainThread]: Command `dbt run` failed at 14:12:12.615587 after 1.18 seconds
+[0m14:12:12.615822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b87190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106612390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10103d850>]}
+[0m14:12:12.616003 [debug] [MainThread]: Flushing usage events
+[0m14:12:12.729140 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:13:29.999195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1253855d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x125486fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x125487610>]}
+
+
+============================== 14:13:30.002027 | 94493a85-48c0-4779-a747-da8b3fb4d850 ==============================
+[0m14:13:30.002027 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:13:30.002384 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'introspect': 'True', 'invocation_command': 'dbt run', 'use_colors': 'True', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'indirect_selection': 'eager', 'static_parser': 'True', 'warn_error': 'None', 'empty': 'False', 'printer_width': '80', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'log_format': 'default', 'version_check': 'True', 'target_path': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/parin/.dbt'}
+[0m14:13:30.773067 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:13:30.773424 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:13:30.773597 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:13:30.923797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '94493a85-48c0-4779-a747-da8b3fb4d850', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x134646590>]}
+[0m14:13:30.957652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '94493a85-48c0-4779-a747-da8b3fb4d850', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1252927d0>]}
+[0m14:13:30.958225 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:13:31.033858 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:13:31.115750 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m14:13:31.116020 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/silver/customer_profiles.sql
+[0m14:13:31.116214 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/staging/stg_transactions.sql
+[0m14:13:31.231730 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_finflow.stg_transactions' (models/staging/stg_transactions.sql) depends on a source named 'finflow_bronze.RAW_TRANSACTIONS' which was not found
+[0m14:13:31.233602 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.2854939, "process_in_blocks": "0", "process_kernel_time": 0.308911, "process_mem_max_rss": "207142912", "process_out_blocks": "0", "process_user_time": 1.271171}
+[0m14:13:31.233903 [debug] [MainThread]: Command `dbt run` failed at 14:13:31.233852 after 1.29 seconds
+[0m14:13:31.234107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1254bf9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1252d55d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c1d810>]}
+[0m14:13:31.234291 [debug] [MainThread]: Flushing usage events
+[0m14:13:31.363054 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:13:41.376120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ac840d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad86910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad86f90>]}
+
+
+============================== 14:13:41.379142 | 5c09177f-ae2a-4ee7-8278-3064bacdf5b7 ==============================
+[0m14:13:41.379142 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:13:41.379458 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'target_path': 'None', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'fail_fast': 'False', 'log_format': 'default', 'log_cache_events': 'False', 'static_parser': 'True', 'write_json': 'True', 'warn_error': 'None', 'use_colors': 'True', 'partial_parse': 'True', 'no_print': 'None', 'indirect_selection': 'eager', 'profiles_dir': '/Users/parin/.dbt', 'printer_width': '80', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs'}
+[0m14:13:42.196330 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:13:42.196629 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:13:42.196787 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:13:42.301818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5c09177f-ae2a-4ee7-8278-3064bacdf5b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad22410>]}
+[0m14:13:42.335766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5c09177f-ae2a-4ee7-8278-3064bacdf5b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ab928d0>]}
+[0m14:13:42.336907 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:13:42.412205 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:13:42.492135 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m14:13:42.492407 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/silver/customer_profiles.sql
+[0m14:13:42.492591 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/staging/stg_transactions.sql
+[0m14:13:42.697170 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_finflow.stg_transactions' (models/staging/stg_transactions.sql) depends on a source named 'finflow_bronze.RAW_TRANSACTIONS' which was not found
+[0m14:13:42.699252 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.3717672, "process_in_blocks": "0", "process_kernel_time": 0.299858, "process_mem_max_rss": "204701696", "process_out_blocks": "0", "process_user_time": 1.340401}
+[0m14:13:42.699557 [debug] [MainThread]: Command `dbt run` failed at 14:13:42.699509 after 1.37 seconds
+[0m14:13:42.699754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad60950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f8053d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042b1690>]}
+[0m14:13:42.699939 [debug] [MainThread]: Flushing usage events
+[0m14:13:42.797801 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:15:05.830503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ef6050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108fd4d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ef7b10>]}
+
+
+============================== 14:15:05.833329 | e5cb202c-0c99-415b-87f1-a05303ffc0c1 ==============================
+[0m14:15:05.833329 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:15:05.833695 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'log_cache_events': 'False', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'printer_width': '80', 'debug': 'False', 'warn_error': 'None', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/Users/parin/.dbt', 'introspect': 'True', 'partial_parse': 'True', 'log_format': 'default', 'target_path': 'None', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'version_check': 'True', 'fail_fast': 'False', 'write_json': 'True', 'cache_selected_only': 'False', 'static_parser': 'True'}
+[0m14:15:06.590309 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:15:06.590602 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:15:06.590765 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:15:06.737587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e5cb202c-0c99-415b-87f1-a05303ffc0c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc4f590>]}
+[0m14:15:06.771039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e5cb202c-0c99-415b-87f1-a05303ffc0c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e0a750>]}
+[0m14:15:06.771573 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:15:06.849409 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:15:06.932925 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 2 files added, 1 files changed.
+[0m14:15:06.933228 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/staging/sources.yml
+[0m14:15:06.933384 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/silver/customer_profiles.sql
+[0m14:15:06.933582 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/staging/stg_transactions.sql
+[0m14:15:07.101755 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_finflow.stg_transactions' (models/staging/stg_transactions.sql) depends on a source named 'finflow_bronze.RAW_TRANSACTIONS' which was not found
+[0m14:15:07.103888 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.3239477, "process_in_blocks": "0", "process_kernel_time": 0.319621, "process_mem_max_rss": "214204416", "process_out_blocks": "0", "process_user_time": 1.325142}
+[0m14:15:07.104153 [debug] [MainThread]: Command `dbt run` failed at 14:15:07.104110 after 1.32 seconds
+[0m14:15:07.104367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104364450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11268d750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1128af890>]}
+[0m14:15:07.104567 [debug] [MainThread]: Flushing usage events
+[0m14:15:07.218118 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:15:23.730603 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105467250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10556eed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10556f550>]}
+
+
+============================== 14:15:23.733864 | 5442c4e1-0034-46d3-a33e-ed27fe3ec5e4 ==============================
+[0m14:15:23.733864 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:15:23.734224 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'warn_error': 'None', 'profiles_dir': '/Users/parin/.dbt', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'quiet': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'empty': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'target_path': 'None', 'printer_width': '80', 'debug': 'False', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'version_check': 'True', 'fail_fast': 'False'}
+[0m14:15:24.454806 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:15:24.455119 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:15:24.455279 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:15:24.560125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5442c4e1-0034-46d3-a33e-ed27fe3ec5e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf063d0>]}
+[0m14:15:24.593873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5442c4e1-0034-46d3-a33e-ed27fe3ec5e4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10461c0d0>]}
+[0m14:15:24.594464 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:15:24.670773 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:15:24.748405 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 2 files added, 1 files changed.
+[0m14:15:24.748715 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/staging/sources.yml
+[0m14:15:24.748874 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/silver/customer_profiles.sql
+[0m14:15:24.749073 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/staging/stg_transactions.sql
+[0m14:15:24.918121 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_finflow.stg_transactions' (models/staging/stg_transactions.sql) depends on a source named 'finflow_bronze.RAW_TRANSACTIONS' which was not found
+[0m14:15:24.920658 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.2345945, "process_in_blocks": "0", "process_kernel_time": 0.268138, "process_mem_max_rss": "213221376", "process_out_blocks": "0", "process_user_time": 1.322961}
+[0m14:15:24.920911 [debug] [MainThread]: Command `dbt run` failed at 14:15:24.920868 after 1.23 seconds
+[0m14:15:24.921108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055476d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0d5750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0f46d0>]}
+[0m14:15:24.921293 [debug] [MainThread]: Flushing usage events
+[0m14:15:25.012414 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:16:19.746244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105649950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10574aed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10574b510>]}
+
+
+============================== 14:16:19.749081 | 5e09f414-6245-467a-82f6-3e3f41ff78c3 ==============================
+[0m14:16:19.749081 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:16:19.749392 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'printer_width': '80', 'static_parser': 'True', 'log_format': 'default', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'use_colors': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'no_print': 'None', 'target_path': 'None', 'warn_error': 'None', 'introspect': 'True', 'version_check': 'True', 'quiet': 'False', 'cache_selected_only': 'False', 'write_json': 'True', 'profiles_dir': '/Users/parin/.dbt', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'debug': 'False'}
+[0m14:16:20.494143 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:16:20.494448 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:16:20.494613 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:16:20.640264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5e09f414-6245-467a-82f6-3e3f41ff78c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c213ed0>]}
+[0m14:16:20.673872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5e09f414-6245-467a-82f6-3e3f41ff78c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105556850>]}
+[0m14:16:20.674423 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:16:20.750429 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:16:20.835357 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 2 files added, 1 files changed.
+[0m14:16:20.835722 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/staging/sources.yml
+[0m14:16:20.835899 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/silver/customer_profiles.sql
+[0m14:16:20.836125 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/staging/stg_transactions.sql
+[0m14:16:21.031201 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_finflow.gold
+[0m14:16:21.035485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5e09f414-6245-467a-82f6-3e3f41ff78c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ee6b890>]}
+[0m14:16:21.128095 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m14:16:21.129865 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m14:16:21.135534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5e09f414-6245-467a-82f6-3e3f41ff78c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113266390>]}
+[0m14:16:21.135787 [info ] [MainThread]: Found 2 models, 1 source, 536 macros
+[0m14:16:21.135957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5e09f414-6245-467a-82f6-3e3f41ff78c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1130c4790>]}
+[0m14:16:21.136743 [info ] [MainThread]: 
+[0m14:16:21.136917 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:16:21.137049 [info ] [MainThread]: 
+[0m14:16:21.137271 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:16:21.139285 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINFLOW'
+[0m14:16:21.171838 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m14:16:21.172051 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m14:16:21.172190 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:16:22.069616 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.897 seconds
+[0m14:16:22.074959 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_FINFLOW, now list_FINFLOW_SILVER_SILVER)
+[0m14:16:22.091924 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW_SILVER_SILVER"
+[0m14:16:22.092435 [debug] [ThreadPool]: On list_FINFLOW_SILVER_SILVER: show objects in FINFLOW.SILVER_SILVER
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW_SILVER_SILVER"} */;
+[0m14:16:22.311290 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.218 seconds
+[0m14:16:22.313664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5e09f414-6245-467a-82f6-3e3f41ff78c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1130d8f10>]}
+[0m14:16:22.316266 [debug] [Thread-2 (]: Began running node model.dbt_finflow.stg_transactions
+[0m14:16:22.316757 [info ] [Thread-2 (]: 1 of 2 START sql view model SILVER_SILVER.stg_transactions ..................... [RUN]
+[0m14:16:22.317259 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FINFLOW_SILVER_SILVER, now model.dbt_finflow.stg_transactions)
+[0m14:16:22.317653 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.stg_transactions
+[0m14:16:22.325776 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.stg_transactions"
+[0m14:16:22.326584 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.stg_transactions
+[0m14:16:22.346321 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.stg_transactions"
+[0m14:16:22.347345 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.stg_transactions"
+[0m14:16:22.347636 [debug] [Thread-2 (]: On model.dbt_finflow.stg_transactions: create or replace   view FINFLOW.SILVER_SILVER.stg_transactions
+  
+  
+  
+  
+  as (
+    -- CTE 1: source — just select from Bronze
+-- CTE 2: deduplicate — remove duplicate transaction_ids
+-- CTE 3: clean — round amount, cast types
+-- Final SELECT — output everything including processed_at
+
+with source as (
+    SELECT * from FINFLOW.BRONZE.RAW_TRANSACTIONS
+),
+deduplicate as (
+    select *, ROW_NUMBER() OVER (PARTITION BY TRANSACTION_ID
+    ORDER BY (TIMESTAMP) ) AS rn 
+    FROM source 
+),
+final as (
+    select TRANSACTION_ID, USER_ID, MERCHANT_ID, ROUND(AMOUNT,2) as Amount, TIMESTAMP,LOCATION,DEVICE_TYPE,IS_FRAUD
+    from deduplicate 
+    where rn = 1
+
+)
+
+select *, CURRENT_TIMESTAMP() AS processed_at from final
+  )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.stg_transactions"} */;
+[0m14:16:22.707305 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.359 seconds
+[0m14:16:22.739707 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5e09f414-6245-467a-82f6-3e3f41ff78c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11307e3d0>]}
+[0m14:16:22.740408 [info ] [Thread-2 (]: 1 of 2 OK created sql view model SILVER_SILVER.stg_transactions ................ [[32mSUCCESS 1[0m in 0.42s]
+[0m14:16:22.740888 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.stg_transactions
+[0m14:16:22.741581 [debug] [Thread-2 (]: Began running node model.dbt_finflow.customer_profiles
+[0m14:16:22.742001 [info ] [Thread-2 (]: 2 of 2 START sql table model SILVER_SILVER.customer_profiles ................... [RUN]
+[0m14:16:22.742367 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_finflow.stg_transactions, now model.dbt_finflow.customer_profiles)
+[0m14:16:22.742659 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.customer_profiles
+[0m14:16:22.745171 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.customer_profiles"
+[0m14:16:22.745924 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.customer_profiles
+[0m14:16:22.761950 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.customer_profiles"
+[0m14:16:22.763017 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.customer_profiles"
+[0m14:16:22.763280 [debug] [Thread-2 (]: On model.dbt_finflow.customer_profiles: create or replace transient table FINFLOW.SILVER_SILVER.customer_profiles
+    
+    
+    
+    as (with step_one as (
+    SELECT * from FINFLOW.SILVER_SILVER.stg_transactions
+),
+final as (
+select user_id, count(transaction_id) as Total_Transactions, avg(amount) as Average_Transaction_Amount, max(amount) as max_transaction_amount, 
+SUM(case when is_fraud then 1 else 0 END ) as total_fraud_flags, count(distinct merchant_id) as distinct_merchants, COUNT(DISTINCT LOCATION) as distinct_locations , min(timestamp) as first_seen, 
+max(timestamp) as last_seen, CURRENT_TIMESTAMP() as processed_at
+from step_one
+group by user_id
+)
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.customer_profiles"} */;
+[0m14:16:24.448400 [debug] [Thread-2 (]: SQL status: SUCCESS 50 in 1.685 seconds
+[0m14:16:24.453706 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5e09f414-6245-467a-82f6-3e3f41ff78c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11313a110>]}
+[0m14:16:24.454972 [info ] [Thread-2 (]: 2 of 2 OK created sql table model SILVER_SILVER.customer_profiles .............. [[32mSUCCESS 50[0m in 1.71s]
+[0m14:16:24.455915 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.customer_profiles
+[0m14:16:24.457714 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:16:24.458333 [debug] [MainThread]: Connection 'model.dbt_finflow.customer_profiles' was left open.
+[0m14:16:24.458899 [debug] [MainThread]: On model.dbt_finflow.customer_profiles: Close
+[0m14:16:24.555030 [info ] [MainThread]: 
+[0m14:16:24.556256 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 3.42 seconds (3.42s).
+[0m14:16:24.557529 [debug] [MainThread]: Command end result
+[0m14:16:24.741218 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m14:16:24.750989 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m14:16:24.754442 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/run_results.json
+[0m14:16:24.754636 [info ] [MainThread]: 
+[0m14:16:24.754876 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:16:24.755019 [info ] [MainThread]: 
+[0m14:16:24.755178 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m14:16:24.757454 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.0608387, "process_in_blocks": "0", "process_kernel_time": 0.371273, "process_mem_max_rss": "225722368", "process_out_blocks": "0", "process_user_time": 1.712644}
+[0m14:16:24.757748 [debug] [MainThread]: Command `dbt run` succeeded at 14:16:24.757704 after 5.06 seconds
+[0m14:16:24.757983 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057257d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105726150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105055ed0>]}
+[0m14:16:24.758172 [debug] [MainThread]: Flushing usage events
+[0m14:16:24.856892 [debug] [MainThread]: An error was encountered while trying to flush usage events
