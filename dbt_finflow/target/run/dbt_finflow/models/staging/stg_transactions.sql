@@ -1,10 +1,7 @@
 
   create or replace   view FINFLOW.SILVER_SILVER.stg_transactions
   
-  
-  
-  
-  as (
+   as (
     -- CTE 1: source — just select from Bronze
 -- CTE 2: deduplicate — remove duplicate transaction_ids
 -- CTE 3: clean — round amount, cast types

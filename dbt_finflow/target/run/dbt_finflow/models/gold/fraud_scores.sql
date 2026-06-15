@@ -2,11 +2,9 @@
   
     
 
-create or replace transient table FINFLOW.SILVER_GOLD.fraud_scores
-    
-    
-    
-    as (with stage as (
+        create or replace transient table FINFLOW.SILVER_GOLD.fraud_scores
+         as
+        (with stage as (
     select * from FINFLOW.SILVER_SILVER.stg_transactions
 ), customer_profile as (
 
@@ -62,8 +60,6 @@ SELECT
     END AS risk_label,
     CURRENT_TIMESTAMP() as processed_at
 FROM risk_score
-    )
-;
-
-
+        );
+      
   
