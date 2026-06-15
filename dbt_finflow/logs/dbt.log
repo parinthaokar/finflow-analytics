@@ -1224,3 +1224,862 @@ select * from final
 [0m14:40:41.614349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110a16710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110a5df10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1107bab10>]}
 [0m14:40:41.614572 [debug] [MainThread]: Flushing usage events
 [0m14:40:41.720712 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:37:12.264982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c85750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d5fdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d87390>]}
+
+
+============================== 14:37:12.267972 | 5ce74e88-ac72-4ed5-8ee1-0addbf0b4d8a ==============================
+[0m14:37:12.267972 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:37:12.268304 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'introspect': 'True', 'static_parser': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'partial_parse': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'log_format': 'default', 'target_path': 'None', 'quiet': 'False', 'profiles_dir': '/Users/parin/.dbt', 'use_experimental_parser': 'False', 'printer_width': '80', 'version_check': 'True', 'use_colors': 'True', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt run'}
+[0m14:37:14.838542 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:37:14.838857 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:37:14.839028 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:37:14.991917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5ce74e88-ac72-4ed5-8ee1-0addbf0b4d8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d21890>]}
+[0m14:37:15.028389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5ce74e88-ac72-4ed5-8ee1-0addbf0b4d8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e516050>]}
+[0m14:37:15.029130 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:37:15.107832 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:37:15.194123 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m14:37:15.194387 [debug] [MainThread]: Partial parsing: added file: dbt_finflow://models/gold/fraud_scores.sql
+[0m14:37:15.194601 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/silver/merchant_profiles.sql
+[0m14:37:15.339290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5ce74e88-ac72-4ed5-8ee1-0addbf0b4d8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ea13b50>]}
+[0m14:37:15.386569 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m14:37:15.388022 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m14:37:15.394252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5ce74e88-ac72-4ed5-8ee1-0addbf0b4d8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e807c50>]}
+[0m14:37:15.394497 [info ] [MainThread]: Found 4 models, 1 source, 536 macros
+[0m14:37:15.394667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5ce74e88-ac72-4ed5-8ee1-0addbf0b4d8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e9b8990>]}
+[0m14:37:15.395545 [info ] [MainThread]: 
+[0m14:37:15.395718 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:37:15.395849 [info ] [MainThread]: 
+[0m14:37:15.396063 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:37:15.398310 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINFLOW'
+[0m14:37:15.487441 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m14:37:15.487721 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m14:37:15.487869 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:37:16.387169 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m14:37:16.387543 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m14:37:16.387811 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m14:37:16.387981 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m14:37:16.389936 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m14:37:16.390193 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m14:37:16.390428 [debug] [ThreadPool]: Opening a new connection, currently in state fail
+[0m14:37:16.940960 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m14:37:16.941726 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m14:37:16.942259 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m14:37:16.942619 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m14:37:16.943583 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:37:16.944218 [debug] [MainThread]: Connection 'list_FINFLOW' was left open.
+[0m14:37:16.944607 [debug] [MainThread]: On list_FINFLOW: No close available on handle
+[0m14:37:16.945046 [info ] [MainThread]: 
+[0m14:37:16.945600 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 1.55 seconds (1.55s).
+[0m14:37:16.946949 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "FINFLOW"
+  Database Error
+    250001 (08001): Failed to connect to DB: AMRJGLO-JC74238.snowflakecomputing.com:443. Failed to authenticate: MFA authentication is required, but none of your current MFA methods are supported for programmatic authentication.
+[0m14:37:16.952488 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 4.737986, "process_in_blocks": "0", "process_kernel_time": 0.456943, "process_mem_max_rss": "223477760", "process_out_blocks": "0", "process_user_time": 1.717123}
+[0m14:37:16.953961 [debug] [MainThread]: Command `dbt run` failed at 14:37:16.953711 after 4.74 seconds
+[0m14:37:16.954802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d86010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d87090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ef35cd0>]}
+[0m14:37:16.955438 [debug] [MainThread]: Flushing usage events
+[0m14:37:17.052815 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:37:30.987182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c033d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b3e890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d0aad0>]}
+
+
+============================== 14:37:30.990143 | 3a597550-861f-48ac-bd71-b3bb9998b170 ==============================
+[0m14:37:30.990143 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:37:30.990467 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'fail_fast': 'False', 'printer_width': '80', 'partial_parse': 'True', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'use_experimental_parser': 'False', 'debug': 'False', 'warn_error': 'None', 'empty': 'False', 'indirect_selection': 'eager', 'introspect': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'profiles_dir': '/Users/parin/.dbt', 'quiet': 'False', 'invocation_command': 'dbt run', 'log_cache_events': 'False'}
+[0m14:37:31.691244 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:37:31.691556 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:37:31.691722 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:37:31.796220 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3a597550-861f-48ac-bd71-b3bb9998b170', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2fabd0>]}
+[0m14:37:31.830039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3a597550-861f-48ac-bd71-b3bb9998b170', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b16790>]}
+[0m14:37:31.830670 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:37:31.904845 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:37:31.991165 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:37:31.991392 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:37:31.991530 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:37:32.007723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3a597550-861f-48ac-bd71-b3bb9998b170', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cb7aad0>]}
+[0m14:37:32.055154 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m14:37:32.056408 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m14:37:32.062070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3a597550-861f-48ac-bd71-b3bb9998b170', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c7a6790>]}
+[0m14:37:32.062340 [info ] [MainThread]: Found 4 models, 1 source, 536 macros
+[0m14:37:32.062521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3a597550-861f-48ac-bd71-b3bb9998b170', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c6a0050>]}
+[0m14:37:32.063488 [info ] [MainThread]: 
+[0m14:37:32.063691 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:37:32.063831 [info ] [MainThread]: 
+[0m14:37:32.064078 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:37:32.066261 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINFLOW'
+[0m14:37:32.102082 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m14:37:32.102316 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m14:37:32.102463 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:37:32.784013 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.681 seconds
+[0m14:37:32.793377 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m14:37:32.794065 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m14:37:32.914304 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.119 seconds
+[0m14:37:32.918544 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_FINFLOW, now create_FINFLOW_SILVER_GOLD)
+[0m14:37:32.919365 [debug] [ThreadPool]: Creating schema "database: "FINFLOW"
+schema: "SILVER_GOLD"
+"
+[0m14:37:32.925076 [debug] [ThreadPool]: Using snowflake connection "create_FINFLOW_SILVER_GOLD"
+[0m14:37:32.925522 [debug] [ThreadPool]: On create_FINFLOW_SILVER_GOLD: create schema if not exists FINFLOW.SILVER_GOLD
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "create_FINFLOW_SILVER_GOLD"} */
+[0m14:37:33.024913 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.099 seconds
+[0m14:37:33.029898 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_FINFLOW_SILVER_GOLD, now list_FINFLOW_SILVER_GOLD)
+[0m14:37:33.047408 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW_SILVER_GOLD"
+[0m14:37:33.047825 [debug] [ThreadPool]: On list_FINFLOW_SILVER_GOLD: show objects in FINFLOW.SILVER_GOLD
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW_SILVER_GOLD"} */;
+[0m14:37:33.165030 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.117 seconds
+[0m14:37:33.167172 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_FINFLOW_SILVER_GOLD, now list_FINFLOW_SILVER_SILVER)
+[0m14:37:33.171706 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW_SILVER_SILVER"
+[0m14:37:33.172130 [debug] [ThreadPool]: On list_FINFLOW_SILVER_SILVER: show objects in FINFLOW.SILVER_SILVER
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW_SILVER_SILVER"} */;
+[0m14:37:33.340838 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.168 seconds
+[0m14:37:33.344149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3a597550-861f-48ac-bd71-b3bb9998b170', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ca1fb10>]}
+[0m14:37:33.347801 [debug] [Thread-2 (]: Began running node model.dbt_finflow.stg_transactions
+[0m14:37:33.348369 [info ] [Thread-2 (]: 1 of 4 START sql view model SILVER_SILVER.stg_transactions ..................... [RUN]
+[0m14:37:33.348847 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FINFLOW_SILVER_SILVER, now model.dbt_finflow.stg_transactions)
+[0m14:37:33.349215 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.stg_transactions
+[0m14:37:33.357655 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.stg_transactions"
+[0m14:37:33.358729 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.stg_transactions
+[0m14:37:33.379472 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.stg_transactions"
+[0m14:37:33.380436 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.stg_transactions"
+[0m14:37:33.380718 [debug] [Thread-2 (]: On model.dbt_finflow.stg_transactions: create or replace   view FINFLOW.SILVER_SILVER.stg_transactions
+  
+  
+  
+  
+  as (
+    -- CTE 1: source — just select from Bronze
+-- CTE 2: deduplicate — remove duplicate transaction_ids
+-- CTE 3: clean — round amount, cast types
+-- Final SELECT — output everything including processed_at
+
+with source as (
+    SELECT * from FINFLOW.BRONZE.RAW_TRANSACTIONS
+),
+deduplicate as (
+    select *, ROW_NUMBER() OVER (PARTITION BY TRANSACTION_ID
+    ORDER BY (TIMESTAMP) ) AS rn 
+    FROM source 
+),
+final as (
+    select TRANSACTION_ID, USER_ID, MERCHANT_ID, ROUND(AMOUNT,2) as Amount, TIMESTAMP,LOCATION,DEVICE_TYPE,IS_FRAUD
+    from deduplicate 
+    where rn = 1
+
+)
+
+select *, CURRENT_TIMESTAMP() AS processed_at from final
+  )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.stg_transactions"} */;
+[0m14:37:33.899451 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.518 seconds
+[0m14:37:33.934030 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3a597550-861f-48ac-bd71-b3bb9998b170', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f985710>]}
+[0m14:37:33.934758 [info ] [Thread-2 (]: 1 of 4 OK created sql view model SILVER_SILVER.stg_transactions ................ [[32mSUCCESS 1[0m in 0.58s]
+[0m14:37:33.935242 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.stg_transactions
+[0m14:37:33.935967 [debug] [Thread-2 (]: Began running node model.dbt_finflow.customer_profiles
+[0m14:37:33.936400 [info ] [Thread-2 (]: 2 of 4 START sql table model SILVER_SILVER.customer_profiles ................... [RUN]
+[0m14:37:33.936781 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_finflow.stg_transactions, now model.dbt_finflow.customer_profiles)
+[0m14:37:33.937076 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.customer_profiles
+[0m14:37:33.939840 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.customer_profiles"
+[0m14:37:33.940889 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.customer_profiles
+[0m14:37:33.958125 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.customer_profiles"
+[0m14:37:33.959370 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.customer_profiles"
+[0m14:37:33.959649 [debug] [Thread-2 (]: On model.dbt_finflow.customer_profiles: create or replace transient table FINFLOW.SILVER_SILVER.customer_profiles
+    
+    
+    
+    as (with step_one as (
+    SELECT * from FINFLOW.SILVER_SILVER.stg_transactions
+),
+final as (
+select user_id, count(transaction_id) as Total_Transactions, avg(amount) as Average_Transaction_Amount, max(amount) as max_transaction_amount, 
+SUM(case when is_fraud then 1 else 0 END ) as total_fraud_flags, count(distinct merchant_id) as distinct_merchants, COUNT(DISTINCT LOCATION) as distinct_locations , min(timestamp) as first_seen, 
+max(timestamp) as last_seen, CURRENT_TIMESTAMP() as processed_at
+from step_one
+group by user_id
+)
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.customer_profiles"} */;
+[0m14:37:35.501772 [debug] [Thread-2 (]: SQL status: SUCCESS 50 in 1.541 seconds
+[0m14:37:35.507065 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3a597550-861f-48ac-bd71-b3bb9998b170', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f8762d0>]}
+[0m14:37:35.508482 [info ] [Thread-2 (]: 2 of 4 OK created sql table model SILVER_SILVER.customer_profiles .............. [[32mSUCCESS 50[0m in 1.57s]
+[0m14:37:35.509356 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.customer_profiles
+[0m14:37:35.509937 [debug] [Thread-2 (]: Began running node model.dbt_finflow.merchant_profiles
+[0m14:37:35.510720 [info ] [Thread-2 (]: 3 of 4 START sql table model SILVER_SILVER.merchant_profiles ................... [RUN]
+[0m14:37:35.511359 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_finflow.customer_profiles, now model.dbt_finflow.merchant_profiles)
+[0m14:37:35.511803 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.merchant_profiles
+[0m14:37:35.516834 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.merchant_profiles"
+[0m14:37:35.521011 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.merchant_profiles
+[0m14:37:35.525482 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.merchant_profiles"
+[0m14:37:35.527128 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.merchant_profiles"
+[0m14:37:35.527519 [debug] [Thread-2 (]: On model.dbt_finflow.merchant_profiles: create or replace transient table FINFLOW.SILVER_SILVER.merchant_profiles
+    
+    
+    
+    as (with step_one as (
+    SELECT * from FINFLOW.SILVER_SILVER.stg_transactions
+),
+final as (
+   select merchant_id, COUNT(transaction_id) as Total_Transactions, avg(amount) as Average_Transaction_Amount, max(amount) as max_transaction_amount,
+    SUM(case when is_fraud then 1 else 0 END ) as total_fraud_flags, count(distinct user_id) as distinct_users, (SUM(case when is_fraud then 1 else 0 end)::float / COUNT(transaction_id)) * 100 as fraud_rate,
+    CURRENT_TIMESTAMP() as processed_at
+    from step_one
+    group by merchant_id    
+)
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.merchant_profiles"} */;
+[0m14:37:36.767308 [debug] [Thread-2 (]: SQL status: SUCCESS 16 in 1.239 seconds
+[0m14:37:36.777191 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3a597550-861f-48ac-bd71-b3bb9998b170', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fa13810>]}
+[0m14:37:36.778410 [info ] [Thread-2 (]: 3 of 4 OK created sql table model SILVER_SILVER.merchant_profiles .............. [[32mSUCCESS 16[0m in 1.27s]
+[0m14:37:36.779354 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.merchant_profiles
+[0m14:37:36.780334 [debug] [Thread-2 (]: Began running node model.dbt_finflow.fraud_scores
+[0m14:37:36.781245 [info ] [Thread-2 (]: 4 of 4 START sql table model SILVER_GOLD.fraud_scores .......................... [RUN]
+[0m14:37:36.781851 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_finflow.merchant_profiles, now model.dbt_finflow.fraud_scores)
+[0m14:37:36.782305 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.fraud_scores
+[0m14:37:36.848471 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.fraud_scores"
+[0m14:37:36.850195 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.fraud_scores
+[0m14:37:36.851967 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.fraud_scores"
+[0m14:37:36.853261 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.fraud_scores"
+[0m14:37:36.853499 [debug] [Thread-2 (]: On model.dbt_finflow.fraud_scores: create or replace transient table FINFLOW.SILVER_GOLD.fraud_scores
+    
+    
+    
+    as (with stage as (
+    select * from FINFLOW.SILVER_SILVER.stg_transactions
+), customer_profile as (
+
+     select * from FINFLOW.SILVER_SILVER.customer_profiles
+), merchant_profiles as (
+
+     select * from FINFLOW.SILVER_SILVER.merchant_profiles
+), join_final as(
+select
+    s.transaction_id,
+    s.user_id,
+    s.merchant_id,
+    s.amount,
+    s.timestamp,
+    s.location,
+    s.device_type,
+    s.is_fraud,
+    cp.total_fraud_flags,
+    cp.avg_transaction_amount,
+    ms.fraud_rate,
+    ms.avg_transaction_amount as merchant_avg_amount
+from stage s
+join customer_profile cp on s.user_id = cp.user_id
+join merchant_profiles ms on s.merchant_id = ms.merchant_id 
+), risk_score as (
+    select
+        *,
+        (CASE WHEN fraud_rate > 50 THEN 40 ELSE 0 END) +
+        (CASE WHEN amount > (2 * avg_transaction_amount) THEN 25 ELSE 0 END) +
+        (CASE WHEN total_fraud_flags > 0 THEN 20 ELSE 0 END) +
+        (CASE WHEN amount > 2000 THEN 15 ELSE 0 END) as risk_score
+    from join_final
+)
+
+
+
+SELECT 
+    transaction_id,
+    user_id,
+    merchant_id,
+    amount,
+    timestamp,
+    location,
+    device_type,
+    is_fraud,
+    total_fraud_flags,
+    fraud_rate,
+    risk_score,
+    CASE 
+        WHEN risk_score >= 80 THEN 'HIGH'
+        WHEN risk_score BETWEEN 40 AND 79 THEN 'MEDIUM'
+        ELSE 'LOW'
+    END AS risk_label,
+    CURRENT_TIMESTAMP() as processed_at
+FROM risk_score
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.fraud_scores"} */;
+[0m14:37:37.225200 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c5123d-0105-ebf4-000e-5cbe00201c8e
+[0m14:37:37.226354 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 24 at position 4
+invalid identifier 'CP.AVG_TRANSACTION_AMOUNT'
+[0m14:37:37.232341 [debug] [Thread-2 (]: Database Error in model fraud_scores (models/gold/fraud_scores.sql)
+  000904 (42000): SQL compilation error: error line 24 at position 4
+  invalid identifier 'CP.AVG_TRANSACTION_AMOUNT'
+  compiled code at target/run/dbt_finflow/models/gold/fraud_scores.sql
+[0m14:37:37.233258 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3a597550-861f-48ac-bd71-b3bb9998b170', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c790990>]}
+[0m14:37:37.234195 [error] [Thread-2 (]: 4 of 4 ERROR creating sql table model SILVER_GOLD.fraud_scores ................. [[31mERROR[0m in 0.45s]
+[0m14:37:37.234935 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.fraud_scores
+[0m14:37:37.235636 [debug] [Thread-5 (]: Marking all children of 'model.dbt_finflow.fraud_scores' to be skipped because of status 'error'.  Reason: Database Error in model fraud_scores (models/gold/fraud_scores.sql)
+  000904 (42000): SQL compilation error: error line 24 at position 4
+  invalid identifier 'CP.AVG_TRANSACTION_AMOUNT'
+  compiled code at target/run/dbt_finflow/models/gold/fraud_scores.sql.
+[0m14:37:37.237922 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:37:37.238292 [debug] [MainThread]: Connection 'model.dbt_finflow.fraud_scores' was left open.
+[0m14:37:37.238589 [debug] [MainThread]: On model.dbt_finflow.fraud_scores: Close
+[0m14:37:37.350726 [info ] [MainThread]: 
+[0m14:37:37.351285 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 5.29 seconds (5.29s).
+[0m14:37:37.352333 [debug] [MainThread]: Command end result
+[0m14:37:37.391955 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m14:37:37.393184 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m14:37:37.396881 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/run_results.json
+[0m14:37:37.397088 [info ] [MainThread]: 
+[0m14:37:37.397296 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:37:37.397466 [info ] [MainThread]: 
+[0m14:37:37.397673 [error] [MainThread]: [31mFailure in model fraud_scores (models/gold/fraud_scores.sql)[0m
+[0m14:37:37.397868 [error] [MainThread]:   Database Error in model fraud_scores (models/gold/fraud_scores.sql)
+  000904 (42000): SQL compilation error: error line 24 at position 4
+  invalid identifier 'CP.AVG_TRANSACTION_AMOUNT'
+  compiled code at target/run/dbt_finflow/models/gold/fraud_scores.sql
+[0m14:37:37.398024 [info ] [MainThread]: 
+[0m14:37:37.398200 [info ] [MainThread]:   compiled code at target/compiled/dbt_finflow/models/gold/fraud_scores.sql
+[0m14:37:37.398348 [info ] [MainThread]: 
+[0m14:37:37.398593 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m14:37:37.400265 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 6.463542, "process_in_blocks": "0", "process_kernel_time": 0.378307, "process_mem_max_rss": "220282880", "process_out_blocks": "0", "process_user_time": 1.64584}
+[0m14:37:37.400506 [debug] [MainThread]: Command `dbt run` failed at 14:37:37.400463 after 6.46 seconds
+[0m14:37:37.400722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101071610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c9c6390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10597f850>]}
+[0m14:37:37.400921 [debug] [MainThread]: Flushing usage events
+[0m14:37:37.486107 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:38:43.943307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052295d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10532ae10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10532b450>]}
+
+
+============================== 14:38:43.946263 | d1a75274-ce3a-4e3d-a682-ebd812e90c8a ==============================
+[0m14:38:43.946263 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:38:43.946597 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'use_colors': 'True', 'partial_parse': 'True', 'printer_width': '80', 'quiet': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'empty': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'version_check': 'True', 'profiles_dir': '/Users/parin/.dbt', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'debug': 'False', 'no_print': 'None', 'introspect': 'True'}
+[0m14:38:44.721302 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:38:44.721607 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:38:44.721770 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:38:44.867289 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd1a75274-ce3a-4e3d-a682-ebd812e90c8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b6bc8d0>]}
+[0m14:38:44.901210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd1a75274-ce3a-4e3d-a682-ebd812e90c8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10beb2050>]}
+[0m14:38:44.901773 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:38:44.976221 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:38:45.062684 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:38:45.063038 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/gold/fraud_scores.sql
+[0m14:38:45.208438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd1a75274-ce3a-4e3d-a682-ebd812e90c8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ea32190>]}
+[0m14:38:45.265853 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m14:38:45.267094 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m14:38:45.272866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd1a75274-ce3a-4e3d-a682-ebd812e90c8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1b2dd0>]}
+[0m14:38:45.273104 [info ] [MainThread]: Found 4 models, 1 source, 536 macros
+[0m14:38:45.273277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd1a75274-ce3a-4e3d-a682-ebd812e90c8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bdc2f90>]}
+[0m14:38:45.274106 [info ] [MainThread]: 
+[0m14:38:45.274283 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:38:45.274410 [info ] [MainThread]: 
+[0m14:38:45.274631 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:38:45.276852 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINFLOW'
+[0m14:38:45.353474 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m14:38:45.353740 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m14:38:45.353895 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:38:46.092863 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.739 seconds
+[0m14:38:46.097769 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m14:38:46.098193 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m14:38:46.180308 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.082 seconds
+[0m14:38:46.185776 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_FINFLOW, now list_FINFLOW_SILVER_SILVER)
+[0m14:38:46.204432 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW_SILVER_SILVER"
+[0m14:38:46.204925 [debug] [ThreadPool]: On list_FINFLOW_SILVER_SILVER: show objects in FINFLOW.SILVER_SILVER
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW_SILVER_SILVER"} */;
+[0m14:38:46.374089 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.169 seconds
+[0m14:38:46.378447 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_FINFLOW_SILVER_SILVER, now list_FINFLOW_SILVER_GOLD)
+[0m14:38:46.384886 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW_SILVER_GOLD"
+[0m14:38:46.385489 [debug] [ThreadPool]: On list_FINFLOW_SILVER_GOLD: show objects in FINFLOW.SILVER_GOLD
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW_SILVER_GOLD"} */;
+[0m14:38:46.469162 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.083 seconds
+[0m14:38:46.470316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd1a75274-ce3a-4e3d-a682-ebd812e90c8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b57ed0>]}
+[0m14:38:46.471887 [debug] [Thread-2 (]: Began running node model.dbt_finflow.stg_transactions
+[0m14:38:46.472235 [info ] [Thread-2 (]: 1 of 4 START sql view model SILVER_SILVER.stg_transactions ..................... [RUN]
+[0m14:38:46.472724 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FINFLOW_SILVER_GOLD, now model.dbt_finflow.stg_transactions)
+[0m14:38:46.472973 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.stg_transactions
+[0m14:38:46.477877 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.stg_transactions"
+[0m14:38:46.478461 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.stg_transactions
+[0m14:38:46.496035 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.stg_transactions"
+[0m14:38:46.496973 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.stg_transactions"
+[0m14:38:46.497196 [debug] [Thread-2 (]: On model.dbt_finflow.stg_transactions: create or replace   view FINFLOW.SILVER_SILVER.stg_transactions
+  
+  
+  
+  
+  as (
+    -- CTE 1: source — just select from Bronze
+-- CTE 2: deduplicate — remove duplicate transaction_ids
+-- CTE 3: clean — round amount, cast types
+-- Final SELECT — output everything including processed_at
+
+with source as (
+    SELECT * from FINFLOW.BRONZE.RAW_TRANSACTIONS
+),
+deduplicate as (
+    select *, ROW_NUMBER() OVER (PARTITION BY TRANSACTION_ID
+    ORDER BY (TIMESTAMP) ) AS rn 
+    FROM source 
+),
+final as (
+    select TRANSACTION_ID, USER_ID, MERCHANT_ID, ROUND(AMOUNT,2) as Amount, TIMESTAMP,LOCATION,DEVICE_TYPE,IS_FRAUD
+    from deduplicate 
+    where rn = 1
+
+)
+
+select *, CURRENT_TIMESTAMP() AS processed_at from final
+  )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.stg_transactions"} */;
+[0m14:38:46.830633 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.333 seconds
+[0m14:38:46.864562 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd1a75274-ce3a-4e3d-a682-ebd812e90c8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113068910>]}
+[0m14:38:46.865239 [info ] [Thread-2 (]: 1 of 4 OK created sql view model SILVER_SILVER.stg_transactions ................ [[32mSUCCESS 1[0m in 0.39s]
+[0m14:38:46.865706 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.stg_transactions
+[0m14:38:46.866402 [debug] [Thread-2 (]: Began running node model.dbt_finflow.customer_profiles
+[0m14:38:46.866827 [info ] [Thread-2 (]: 2 of 4 START sql table model SILVER_SILVER.customer_profiles ................... [RUN]
+[0m14:38:46.867198 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_finflow.stg_transactions, now model.dbt_finflow.customer_profiles)
+[0m14:38:46.867481 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.customer_profiles
+[0m14:38:46.870038 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.customer_profiles"
+[0m14:38:46.870622 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.customer_profiles
+[0m14:38:46.887182 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.customer_profiles"
+[0m14:38:46.888378 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.customer_profiles"
+[0m14:38:46.888666 [debug] [Thread-2 (]: On model.dbt_finflow.customer_profiles: create or replace transient table FINFLOW.SILVER_SILVER.customer_profiles
+    
+    
+    
+    as (with step_one as (
+    SELECT * from FINFLOW.SILVER_SILVER.stg_transactions
+),
+final as (
+select user_id, count(transaction_id) as Total_Transactions, avg(amount) as Average_Transaction_Amount, max(amount) as max_transaction_amount, 
+SUM(case when is_fraud then 1 else 0 END ) as total_fraud_flags, count(distinct merchant_id) as distinct_merchants, COUNT(DISTINCT LOCATION) as distinct_locations , min(timestamp) as first_seen, 
+max(timestamp) as last_seen, CURRENT_TIMESTAMP() as processed_at
+from step_one
+group by user_id
+)
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.customer_profiles"} */;
+[0m14:38:47.920569 [debug] [Thread-2 (]: SQL status: SUCCESS 50 in 1.031 seconds
+[0m14:38:47.925459 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd1a75274-ce3a-4e3d-a682-ebd812e90c8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11306b7d0>]}
+[0m14:38:47.926385 [info ] [Thread-2 (]: 2 of 4 OK created sql table model SILVER_SILVER.customer_profiles .............. [[32mSUCCESS 50[0m in 1.06s]
+[0m14:38:47.927119 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.customer_profiles
+[0m14:38:47.927616 [debug] [Thread-2 (]: Began running node model.dbt_finflow.merchant_profiles
+[0m14:38:47.928348 [info ] [Thread-2 (]: 3 of 4 START sql table model SILVER_SILVER.merchant_profiles ................... [RUN]
+[0m14:38:47.929014 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_finflow.customer_profiles, now model.dbt_finflow.merchant_profiles)
+[0m14:38:47.929491 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.merchant_profiles
+[0m14:38:47.933123 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.merchant_profiles"
+[0m14:38:47.934773 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.merchant_profiles
+[0m14:38:47.938514 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.merchant_profiles"
+[0m14:38:47.940572 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.merchant_profiles"
+[0m14:38:47.940959 [debug] [Thread-2 (]: On model.dbt_finflow.merchant_profiles: create or replace transient table FINFLOW.SILVER_SILVER.merchant_profiles
+    
+    
+    
+    as (with step_one as (
+    SELECT * from FINFLOW.SILVER_SILVER.stg_transactions
+),
+final as (
+   select merchant_id, COUNT(transaction_id) as Total_Transactions, avg(amount) as Average_Transaction_Amount, max(amount) as max_transaction_amount,
+    SUM(case when is_fraud then 1 else 0 END ) as total_fraud_flags, count(distinct user_id) as distinct_users, (SUM(case when is_fraud then 1 else 0 end)::float / COUNT(transaction_id)) * 100 as fraud_rate,
+    CURRENT_TIMESTAMP() as processed_at
+    from step_one
+    group by merchant_id    
+)
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.merchant_profiles"} */;
+[0m14:38:48.857670 [debug] [Thread-2 (]: SQL status: SUCCESS 16 in 0.916 seconds
+[0m14:38:48.863255 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd1a75274-ce3a-4e3d-a682-ebd812e90c8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113080e10>]}
+[0m14:38:48.864701 [info ] [Thread-2 (]: 3 of 4 OK created sql table model SILVER_SILVER.merchant_profiles .............. [[32mSUCCESS 16[0m in 0.93s]
+[0m14:38:48.865577 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.merchant_profiles
+[0m14:38:48.866855 [debug] [Thread-2 (]: Began running node model.dbt_finflow.fraud_scores
+[0m14:38:48.867553 [info ] [Thread-2 (]: 4 of 4 START sql table model SILVER_GOLD.fraud_scores .......................... [RUN]
+[0m14:38:48.868139 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_finflow.merchant_profiles, now model.dbt_finflow.fraud_scores)
+[0m14:38:48.868565 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.fraud_scores
+[0m14:38:48.874472 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.fraud_scores"
+[0m14:38:48.876723 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.fraud_scores
+[0m14:38:48.881107 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.fraud_scores"
+[0m14:38:48.883839 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.fraud_scores"
+[0m14:38:48.884279 [debug] [Thread-2 (]: On model.dbt_finflow.fraud_scores: create or replace transient table FINFLOW.SILVER_GOLD.fraud_scores
+    
+    
+    
+    as (with stage as (
+    select * from FINFLOW.SILVER_SILVER.stg_transactions
+), customer_profile as (
+
+     select * from FINFLOW.SILVER_SILVER.customer_profiles
+), merchant_profiles as (
+
+     select * from FINFLOW.SILVER_SILVER.merchant_profiles
+), join_final as(
+select
+    s.transaction_id,
+    s.user_id,
+    s.merchant_id,
+    s.amount,
+    s.timestamp,
+    s.location,
+    s.device_type,
+    s.is_fraud,
+    cp.total_fraud_flags,
+    cp.Average_Transaction_Amount,
+    ms.fraud_rate,
+    ms.avg_transaction_amount as merchant_avg_amount
+from stage s
+join customer_profile cp on s.user_id = cp.user_id
+join merchant_profiles ms on s.merchant_id = ms.merchant_id 
+), risk_score as (
+    select
+        *,
+        (CASE WHEN fraud_rate > 50 THEN 40 ELSE 0 END) +
+        (CASE WHEN amount > (2 * Average_Transaction_Amount) THEN 25 ELSE 0 END) +
+        (CASE WHEN total_fraud_flags > 0 THEN 20 ELSE 0 END) +
+        (CASE WHEN amount > 2000 THEN 15 ELSE 0 END) as risk_score
+    from join_final
+)
+
+
+
+SELECT 
+    transaction_id,
+    user_id,
+    merchant_id,
+    amount,
+    timestamp,
+    location,
+    device_type,
+    is_fraud,
+    total_fraud_flags,
+    fraud_rate,
+    risk_score,
+    CASE 
+        WHEN risk_score >= 80 THEN 'HIGH'
+        WHEN risk_score BETWEEN 40 AND 79 THEN 'MEDIUM'
+        ELSE 'LOW'
+    END AS risk_label,
+    CURRENT_TIMESTAMP() as processed_at
+FROM risk_score
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.fraud_scores"} */;
+[0m14:38:49.276681 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c5123e-0105-ebf4-000e-5cbe00201c9e
+[0m14:38:49.277485 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 26 at position 4
+invalid identifier 'MS.AVG_TRANSACTION_AMOUNT'
+[0m14:38:49.282603 [debug] [Thread-2 (]: Database Error in model fraud_scores (models/gold/fraud_scores.sql)
+  000904 (42000): SQL compilation error: error line 26 at position 4
+  invalid identifier 'MS.AVG_TRANSACTION_AMOUNT'
+  compiled code at target/run/dbt_finflow/models/gold/fraud_scores.sql
+[0m14:38:49.283300 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd1a75274-ce3a-4e3d-a682-ebd812e90c8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1aa790>]}
+[0m14:38:49.284054 [error] [Thread-2 (]: 4 of 4 ERROR creating sql table model SILVER_GOLD.fraud_scores ................. [[31mERROR[0m in 0.42s]
+[0m14:38:49.284657 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.fraud_scores
+[0m14:38:49.285199 [debug] [Thread-5 (]: Marking all children of 'model.dbt_finflow.fraud_scores' to be skipped because of status 'error'.  Reason: Database Error in model fraud_scores (models/gold/fraud_scores.sql)
+  000904 (42000): SQL compilation error: error line 26 at position 4
+  invalid identifier 'MS.AVG_TRANSACTION_AMOUNT'
+  compiled code at target/run/dbt_finflow/models/gold/fraud_scores.sql.
+[0m14:38:49.287091 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:38:49.287399 [debug] [MainThread]: Connection 'model.dbt_finflow.fraud_scores' was left open.
+[0m14:38:49.287660 [debug] [MainThread]: On model.dbt_finflow.fraud_scores: Close
+[0m14:38:49.381350 [info ] [MainThread]: 
+[0m14:38:49.381984 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 4.11 seconds (4.11s).
+[0m14:38:49.383386 [debug] [MainThread]: Command end result
+[0m14:38:49.423877 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m14:38:49.424956 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m14:38:49.428700 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/run_results.json
+[0m14:38:49.428907 [info ] [MainThread]: 
+[0m14:38:49.429119 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:38:49.429297 [info ] [MainThread]: 
+[0m14:38:49.429516 [error] [MainThread]: [31mFailure in model fraud_scores (models/gold/fraud_scores.sql)[0m
+[0m14:38:49.429718 [error] [MainThread]:   Database Error in model fraud_scores (models/gold/fraud_scores.sql)
+  000904 (42000): SQL compilation error: error line 26 at position 4
+  invalid identifier 'MS.AVG_TRANSACTION_AMOUNT'
+  compiled code at target/run/dbt_finflow/models/gold/fraud_scores.sql
+[0m14:38:49.429877 [info ] [MainThread]: 
+[0m14:38:49.430054 [info ] [MainThread]:   compiled code at target/compiled/dbt_finflow/models/gold/fraud_scores.sql
+[0m14:38:49.430205 [info ] [MainThread]: 
+[0m14:38:49.430370 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m14:38:49.432338 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 5.5382257, "process_in_blocks": "0", "process_kernel_time": 0.367512, "process_mem_max_rss": "225837056", "process_out_blocks": "0", "process_user_time": 1.721865}
+[0m14:38:49.432576 [debug] [MainThread]: Command `dbt run` failed at 14:38:49.432534 after 5.54 seconds
+[0m14:38:49.432794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105347990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10532b290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100691450>]}
+[0m14:38:49.432990 [debug] [MainThread]: Flushing usage events
+[0m14:38:49.541505 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:39:10.845993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108585d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108786d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108787410>]}
+
+
+============================== 14:39:10.849192 | bf7bb110-d7f4-4c62-a179-021f8b3ea12a ==============================
+[0m14:39:10.849192 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:39:10.849533 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'profiles_dir': '/Users/parin/.dbt', 'target_path': 'None', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'printer_width': '80', 'debug': 'False', 'log_format': 'default', 'cache_selected_only': 'False', 'invocation_command': 'dbt run', 'empty': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'introspect': 'True', 'version_check': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'static_parser': 'True', 'log_path': '/Users/parin/Documents/finflow_analytics/dbt_finflow/logs', 'write_json': 'True'}
+[0m14:39:11.567935 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:39:11.568269 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:39:11.568440 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:39:11.672466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bf7bb110-d7f4-4c62-a179-021f8b3ea12a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118573cd0>]}
+[0m14:39:11.706434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bf7bb110-d7f4-4c62-a179-021f8b3ea12a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084925d0>]}
+[0m14:39:11.707033 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m14:39:11.781939 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:39:11.862158 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:39:11.862448 [debug] [MainThread]: Partial parsing: updated file: dbt_finflow://models/gold/fraud_scores.sql
+[0m14:39:12.008517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bf7bb110-d7f4-4c62-a179-021f8b3ea12a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119420f90>]}
+[0m14:39:12.050233 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m14:39:12.051595 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m14:39:12.057318 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bf7bb110-d7f4-4c62-a179-021f8b3ea12a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119238250>]}
+[0m14:39:12.057576 [info ] [MainThread]: Found 4 models, 1 source, 536 macros
+[0m14:39:12.057763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bf7bb110-d7f4-4c62-a179-021f8b3ea12a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119439510>]}
+[0m14:39:12.058649 [info ] [MainThread]: 
+[0m14:39:12.058840 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:39:12.058972 [info ] [MainThread]: 
+[0m14:39:12.059216 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:39:12.061632 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_FINFLOW'
+[0m14:39:12.138997 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m14:39:12.139256 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m14:39:12.139398 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:39:13.112477 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.973 seconds
+[0m14:39:13.121779 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW"
+[0m14:39:13.122386 [debug] [ThreadPool]: On list_FINFLOW: show terse schemas in database FINFLOW
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW"} */
+[0m14:39:13.238455 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.116 seconds
+[0m14:39:13.240538 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_FINFLOW, now list_FINFLOW_SILVER_SILVER)
+[0m14:39:13.249533 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW_SILVER_SILVER"
+[0m14:39:13.249777 [debug] [ThreadPool]: On list_FINFLOW_SILVER_SILVER: show objects in FINFLOW.SILVER_SILVER
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW_SILVER_SILVER"} */;
+[0m14:39:13.355499 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.105 seconds
+[0m14:39:13.357736 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_FINFLOW_SILVER_SILVER, now list_FINFLOW_SILVER_GOLD)
+[0m14:39:13.361543 [debug] [ThreadPool]: Using snowflake connection "list_FINFLOW_SILVER_GOLD"
+[0m14:39:13.361928 [debug] [ThreadPool]: On list_FINFLOW_SILVER_GOLD: show objects in FINFLOW.SILVER_GOLD
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "connection_name": "list_FINFLOW_SILVER_GOLD"} */;
+[0m14:39:13.466021 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.104 seconds
+[0m14:39:13.467438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bf7bb110-d7f4-4c62-a179-021f8b3ea12a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075cf210>]}
+[0m14:39:13.469992 [debug] [Thread-2 (]: Began running node model.dbt_finflow.stg_transactions
+[0m14:39:13.470412 [info ] [Thread-2 (]: 1 of 4 START sql view model SILVER_SILVER.stg_transactions ..................... [RUN]
+[0m14:39:13.470994 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_FINFLOW_SILVER_GOLD, now model.dbt_finflow.stg_transactions)
+[0m14:39:13.471284 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.stg_transactions
+[0m14:39:13.476960 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.stg_transactions"
+[0m14:39:13.477582 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.stg_transactions
+[0m14:39:13.498115 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.stg_transactions"
+[0m14:39:13.499037 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.stg_transactions"
+[0m14:39:13.499286 [debug] [Thread-2 (]: On model.dbt_finflow.stg_transactions: create or replace   view FINFLOW.SILVER_SILVER.stg_transactions
+  
+  
+  
+  
+  as (
+    -- CTE 1: source — just select from Bronze
+-- CTE 2: deduplicate — remove duplicate transaction_ids
+-- CTE 3: clean — round amount, cast types
+-- Final SELECT — output everything including processed_at
+
+with source as (
+    SELECT * from FINFLOW.BRONZE.RAW_TRANSACTIONS
+),
+deduplicate as (
+    select *, ROW_NUMBER() OVER (PARTITION BY TRANSACTION_ID
+    ORDER BY (TIMESTAMP) ) AS rn 
+    FROM source 
+),
+final as (
+    select TRANSACTION_ID, USER_ID, MERCHANT_ID, ROUND(AMOUNT,2) as Amount, TIMESTAMP,LOCATION,DEVICE_TYPE,IS_FRAUD
+    from deduplicate 
+    where rn = 1
+
+)
+
+select *, CURRENT_TIMESTAMP() AS processed_at from final
+  )
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.stg_transactions"} */;
+[0m14:39:13.966192 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.466 seconds
+[0m14:39:13.998036 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bf7bb110-d7f4-4c62-a179-021f8b3ea12a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1190d6810>]}
+[0m14:39:13.998752 [info ] [Thread-2 (]: 1 of 4 OK created sql view model SILVER_SILVER.stg_transactions ................ [[32mSUCCESS 1[0m in 0.53s]
+[0m14:39:13.999217 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.stg_transactions
+[0m14:39:13.999882 [debug] [Thread-2 (]: Began running node model.dbt_finflow.customer_profiles
+[0m14:39:14.000241 [info ] [Thread-2 (]: 2 of 4 START sql table model SILVER_SILVER.customer_profiles ................... [RUN]
+[0m14:39:14.000588 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_finflow.stg_transactions, now model.dbt_finflow.customer_profiles)
+[0m14:39:14.000848 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.customer_profiles
+[0m14:39:14.003402 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.customer_profiles"
+[0m14:39:14.003972 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.customer_profiles
+[0m14:39:14.021848 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.customer_profiles"
+[0m14:39:14.022917 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.customer_profiles"
+[0m14:39:14.023203 [debug] [Thread-2 (]: On model.dbt_finflow.customer_profiles: create or replace transient table FINFLOW.SILVER_SILVER.customer_profiles
+    
+    
+    
+    as (with step_one as (
+    SELECT * from FINFLOW.SILVER_SILVER.stg_transactions
+),
+final as (
+select user_id, count(transaction_id) as Total_Transactions, avg(amount) as Average_Transaction_Amount, max(amount) as max_transaction_amount, 
+SUM(case when is_fraud then 1 else 0 END ) as total_fraud_flags, count(distinct merchant_id) as distinct_merchants, COUNT(DISTINCT LOCATION) as distinct_locations , min(timestamp) as first_seen, 
+max(timestamp) as last_seen, CURRENT_TIMESTAMP() as processed_at
+from step_one
+group by user_id
+)
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.customer_profiles"} */;
+[0m14:39:14.868683 [debug] [Thread-2 (]: SQL status: SUCCESS 50 in 0.845 seconds
+[0m14:39:14.873196 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bf7bb110-d7f4-4c62-a179-021f8b3ea12a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1190b8150>]}
+[0m14:39:14.874153 [info ] [Thread-2 (]: 2 of 4 OK created sql table model SILVER_SILVER.customer_profiles .............. [[32mSUCCESS 50[0m in 0.87s]
+[0m14:39:14.874902 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.customer_profiles
+[0m14:39:14.875421 [debug] [Thread-2 (]: Began running node model.dbt_finflow.merchant_profiles
+[0m14:39:14.876165 [info ] [Thread-2 (]: 3 of 4 START sql table model SILVER_SILVER.merchant_profiles ................... [RUN]
+[0m14:39:14.876754 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_finflow.customer_profiles, now model.dbt_finflow.merchant_profiles)
+[0m14:39:14.877164 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.merchant_profiles
+[0m14:39:14.881041 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.merchant_profiles"
+[0m14:39:14.882927 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.merchant_profiles
+[0m14:39:14.886221 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.merchant_profiles"
+[0m14:39:14.887624 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.merchant_profiles"
+[0m14:39:14.888611 [debug] [Thread-2 (]: On model.dbt_finflow.merchant_profiles: create or replace transient table FINFLOW.SILVER_SILVER.merchant_profiles
+    
+    
+    
+    as (with step_one as (
+    SELECT * from FINFLOW.SILVER_SILVER.stg_transactions
+),
+final as (
+   select merchant_id, COUNT(transaction_id) as Total_Transactions, avg(amount) as Average_Transaction_Amount, max(amount) as max_transaction_amount,
+    SUM(case when is_fraud then 1 else 0 END ) as total_fraud_flags, count(distinct user_id) as distinct_users, (SUM(case when is_fraud then 1 else 0 end)::float / COUNT(transaction_id)) * 100 as fraud_rate,
+    CURRENT_TIMESTAMP() as processed_at
+    from step_one
+    group by merchant_id    
+)
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.merchant_profiles"} */;
+[0m14:39:15.584466 [debug] [Thread-2 (]: SQL status: SUCCESS 16 in 0.695 seconds
+[0m14:39:15.590445 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bf7bb110-d7f4-4c62-a179-021f8b3ea12a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12c183e90>]}
+[0m14:39:15.591826 [info ] [Thread-2 (]: 3 of 4 OK created sql table model SILVER_SILVER.merchant_profiles .............. [[32mSUCCESS 16[0m in 0.71s]
+[0m14:39:15.592664 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.merchant_profiles
+[0m14:39:15.593923 [debug] [Thread-2 (]: Began running node model.dbt_finflow.fraud_scores
+[0m14:39:15.594658 [info ] [Thread-2 (]: 4 of 4 START sql table model SILVER_GOLD.fraud_scores .......................... [RUN]
+[0m14:39:15.595660 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_finflow.merchant_profiles, now model.dbt_finflow.fraud_scores)
+[0m14:39:15.596226 [debug] [Thread-2 (]: Began compiling node model.dbt_finflow.fraud_scores
+[0m14:39:15.601929 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_finflow.fraud_scores"
+[0m14:39:15.602936 [debug] [Thread-2 (]: Began executing node model.dbt_finflow.fraud_scores
+[0m14:39:15.606433 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_finflow.fraud_scores"
+[0m14:39:15.609079 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_finflow.fraud_scores"
+[0m14:39:15.609558 [debug] [Thread-2 (]: On model.dbt_finflow.fraud_scores: create or replace transient table FINFLOW.SILVER_GOLD.fraud_scores
+    
+    
+    
+    as (with stage as (
+    select * from FINFLOW.SILVER_SILVER.stg_transactions
+), customer_profile as (
+
+     select * from FINFLOW.SILVER_SILVER.customer_profiles
+), merchant_profiles as (
+
+     select * from FINFLOW.SILVER_SILVER.merchant_profiles
+), join_final as(
+select
+    s.transaction_id,
+    s.user_id,
+    s.merchant_id,
+    s.amount,
+    s.timestamp,
+    s.location,
+    s.device_type,
+    s.is_fraud,
+    cp.total_fraud_flags,
+    cp.Average_Transaction_Amount,
+    ms.fraud_rate,
+    ms.Average_Transaction_Amount as merchant_avg_amount
+from stage s
+join customer_profile cp on s.user_id = cp.user_id
+join merchant_profiles ms on s.merchant_id = ms.merchant_id 
+), risk_score as (
+    select
+        *,
+        (CASE WHEN fraud_rate > 50 THEN 40 ELSE 0 END) +
+        (CASE WHEN amount > (2 * Average_Transaction_Amount) THEN 25 ELSE 0 END) +
+        (CASE WHEN total_fraud_flags > 0 THEN 20 ELSE 0 END) +
+        (CASE WHEN amount > 2000 THEN 15 ELSE 0 END) as risk_score
+    from join_final
+)
+
+
+
+SELECT 
+    transaction_id,
+    user_id,
+    merchant_id,
+    amount,
+    timestamp,
+    location,
+    device_type,
+    is_fraud,
+    total_fraud_flags,
+    fraud_rate,
+    risk_score,
+    CASE 
+        WHEN risk_score >= 80 THEN 'HIGH'
+        WHEN risk_score BETWEEN 40 AND 79 THEN 'MEDIUM'
+        ELSE 'LOW'
+    END AS risk_label,
+    CURRENT_TIMESTAMP() as processed_at
+FROM risk_score
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_finflow", "target_name": "dev", "node_id": "model.dbt_finflow.fraud_scores"} */;
+[0m14:39:16.408061 [debug] [Thread-2 (]: SQL status: SUCCESS 687 in 0.798 seconds
+[0m14:39:16.413417 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bf7bb110-d7f4-4c62-a179-021f8b3ea12a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cc0fa90>]}
+[0m14:39:16.414829 [info ] [Thread-2 (]: 4 of 4 OK created sql table model SILVER_GOLD.fraud_scores ..................... [[32mSUCCESS 687[0m in 0.82s]
+[0m14:39:16.415751 [debug] [Thread-2 (]: Finished running node model.dbt_finflow.fraud_scores
+[0m14:39:16.417680 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:39:16.418097 [debug] [MainThread]: Connection 'model.dbt_finflow.fraud_scores' was left open.
+[0m14:39:16.418476 [debug] [MainThread]: On model.dbt_finflow.fraud_scores: Close
+[0m14:39:16.547409 [info ] [MainThread]: 
+[0m14:39:16.548190 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 4.49 seconds (4.49s).
+[0m14:39:16.549550 [debug] [MainThread]: Command end result
+[0m14:39:16.585942 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/manifest.json
+[0m14:39:16.587092 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/semantic_manifest.json
+[0m14:39:16.590861 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/parin/Documents/finflow_analytics/dbt_finflow/target/run_results.json
+[0m14:39:16.591065 [info ] [MainThread]: 
+[0m14:39:16.591286 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:39:16.591466 [info ] [MainThread]: 
+[0m14:39:16.591671 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m14:39:16.593815 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.7943344, "process_in_blocks": "0", "process_kernel_time": 0.36111, "process_mem_max_rss": "222560256", "process_out_blocks": "0", "process_user_time": 1.698211}
+[0m14:39:16.594069 [debug] [MainThread]: Command `dbt run` succeeded at 14:39:16.594025 after 5.79 seconds
+[0m14:39:16.594286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108760990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108762090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102813ad0>]}
+[0m14:39:16.594506 [debug] [MainThread]: Flushing usage events
+[0m14:39:16.682714 [debug] [MainThread]: An error was encountered while trying to flush usage events

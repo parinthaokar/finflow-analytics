@@ -14,7 +14,7 @@ final as (
     SUM(case when is_fraud then 1 else 0 END ) as total_fraud_flags, count(distinct user_id) as distinct_users, (SUM(case when is_fraud then 1 else 0 end)::float / COUNT(transaction_id)) * 100 as fraud_rate,
     CURRENT_TIMESTAMP() as processed_at
     from step_one
-    group by merchant_id
+    group by merchant_id    
 )
 
 select * from final
