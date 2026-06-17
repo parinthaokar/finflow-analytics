@@ -1,3 +1,19 @@
+version: '3.8'
+
+x-airflow-common:
+  &airflow-common
+  image: apache/airflow:2.8.0
+  environment:
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__FERNET_KEY: ''
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+  volumes:
+    - ./airflow/dags:/opt/airflow/dags
+    - ./dbt_finflow:/opt/airflow/dbt_finflow
+  depends_on:
+    - postgres
 
 services:
   zookeeper:
@@ -33,3 +49,40 @@ services:
     environment:
       KAFKA_CLUSTERS_0_NAME: finflow
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+
+  postgres:
+    image: postgres:13
+    container_name: finflow_postgres
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    ports:
+      - "5432:5432"
+
+  airflow-init:
+    <<: *airflow-common
+    container_name: finflow_airflow_init
+    command: version
+    environment:
+      _AIRFLOW_DB_MIGRATE: 'true'
+      _AIRFLOW_WWW_USER_CREATE: 'true'
+      _AIRFLOW_WWW_USER_USERNAME: admin
+      _AIRFLOW_WWW_USER_PASSWORD: admin
+
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: finflow_airflow_webserver
+    command: webserver
+    ports:
+      - "8081:8080"
+    restart: always
+
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: finflow_airflow_scheduler
+    command: scheduler
+    restart: always
+    
+
+
