@@ -2,11 +2,9 @@
   
     
 
-create or replace transient table FINFLOW.SILVER_SILVER.merchant_profiles
-    
-    
-    
-    as (with step_one as (
+        create or replace transient table FINFLOW.SILVER_SILVER.merchant_profiles
+         as
+        (with step_one as (
     SELECT * from FINFLOW.SILVER_SILVER.stg_transactions
 ),
 final as (
@@ -18,8 +16,6 @@ final as (
 )
 
 select * from final
-    )
-;
-
-
+        );
+      
   
