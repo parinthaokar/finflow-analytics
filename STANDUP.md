@@ -33,3 +33,12 @@
 
 🚧 Blockers:
 - Snowflake MFA required key pair auth setup
+
+### June 27 2026
+✅ Done:
+- Recreated transactions topic with 3 partitions
+- Demonstrated Kafka consumer group parallelism with 2 simultaneous consumers
+- Confirmed partition-to-consumer assignment behavior (max parallelism = partition count)
+
+🔜 Next:
+- dbt macros
