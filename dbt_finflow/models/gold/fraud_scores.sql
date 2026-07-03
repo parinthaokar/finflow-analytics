@@ -17,7 +17,7 @@ select
     s.device_type,
     s.is_fraud,
     cp.total_fraud_flags,
-    cp.Average_Transaction_Amount,
+    cp.Average_Transaction_Amount as avg_transaction_amount,
     ms.fraud_rate,
     ms.Average_Transaction_Amount as merchant_avg_amount
 from stage s
